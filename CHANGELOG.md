@@ -4,6 +4,8 @@
 ### Changed
   - Remove unused dependencies, namely `babel-preset-react-hmre` and
     `babel-plugin-transform-export-extensions`.
+  - Remove `babel-plugin-syntax-flow` and `babel-plugin-transform-flow-strip-types`
+    as they are already part of the React preset.
 
 ## 2016-10-10
 ### Changed
