@@ -1,6 +1,9 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  - Remove unused dependencies, namely `babel-preset-react-hmre` and
+    `babel-plugin-transform-export-extensions`.
 
 ## 2016-10-10
 ### Changed
