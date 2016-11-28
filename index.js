@@ -11,8 +11,6 @@ module.exports = {
     "transform-decorators-legacy",
     "transform-class-properties",
     "transform-object-rest-spread",
-    "transform-flow-strip-types",
-    "syntax-flow",
     "syntax-trailing-function-commas",
   ]
 };
