@@ -14,11 +14,16 @@
     "url": "https://github.com/Gandi/babel-preset-gandi/issues"
   },
   "homepage": "https://github.com/Gandi/babel-preset-gandi",
-  "keywords": ["babel", "babel-preset", "gandi"],
+  "keywords": [
+    "babel",
+    "babel-preset",
+    "gandi"
+  ],
   "author": "Gandi",
   "license": "ISC",
   "private": false,
   "dependencies": {
+    "babel-plugin-flow-react-proptypes": "^0.17.2",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-plugin-syntax-flow": "^6.13.0",
     "babel-plugin-syntax-trailing-function-commas": "^6.5.0",

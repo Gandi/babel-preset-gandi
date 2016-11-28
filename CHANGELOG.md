@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Added
+  - The `flow-react-proptypes` plugin.
 
 ## 2016-10-10
 ### Changed

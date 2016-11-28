@@ -6,6 +6,7 @@ module.exports = {
       "polyfill": true,
       "regenerator": true
     }],
+    "flow-react-proptypes",
     "transform-async-to-generator",
     "transform-object-assign",
     "transform-decorators-legacy",
