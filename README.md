@@ -15,7 +15,7 @@ Add the following line to your `.babelrc` file:
 
 ``` json
 {
-  "presets": ["gandi"]
+  "presets": ["@gandi/gandi"]
 }
 ```
 
