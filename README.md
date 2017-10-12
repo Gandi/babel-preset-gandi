@@ -1,7 +1,7 @@
-Babel preset for Gandi JavaScript projects
-==========================================
+Babel preset for Gandi's JavaScript projects
+============================================
 
-Includes ES2015, React, as well as common transforms and polyfills.
+Includes ES2017+, React, Flow, as well as common transforms and polyfills.
 
 ## Installation
 
@@ -9,15 +9,27 @@ Includes ES2015, React, as well as common transforms and polyfills.
 $ npm install --save-dev @gandi/babel-preset-gandi
 ```
 
+
 ## Usage
 
 Add the following line to your `.babelrc` file:
 
 ``` json
 {
-  "presets": ["gandi"]
+  "presets": ["@gandi/gandi"]
 }
 ```
+
+Pass options to `babel-preset-env`
+
+``` json
+{
+  "presets": [["@gandi/gandi", { "modules": false }]]
+}
+```
+
+See the [full list of available options](https://github.com/babel/babel-preset-env#options).
+
 
 ## Changelog
 
@@ -32,9 +44,11 @@ Please open an [issue](https://github.com/Gandi/babel-preset-gandi/issues). If i
 
 Else you can start contributing.
 
+
 ### Code of conduct
 
 Be nice. Thanks.
+
 
 ### Contributors
 
