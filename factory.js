@@ -12,11 +12,10 @@
  * https://babeljs.io/docs/plugins/transform-runtime
  */
 
-module.exports = (context, options) => {
+const factory = (options) => {
   const defaults = {
     targets: {
       browsers: ['last 2 versions', '> 1%'],
-      node: 8,
     },
   };
 
@@ -44,3 +43,5 @@ module.exports = (context, options) => {
     plugins,
   };
 };
+
+module.exports = factory;
