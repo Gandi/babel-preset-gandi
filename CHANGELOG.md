@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## 2.0.0 - 2017-11-07
+### Changed
+  - Switch to `babel-preset-env`.
+    Remove duplicate or unused transform plugins.
+
 ## 2016-10-10
 ### Changed
   - Enable babel-runtime transform `polyfill` option to polyfill built-ins such as Promise, Set, Symbol etc,

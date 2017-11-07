@@ -1,6 +1,6 @@
 {
   "name": "@gandi/babel-preset-gandi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Babel preset used in Gandi's JavaScript projects. Includes ES2017+, React, Flow as well as common transforms and polyfills.",
   "main": "index.js",
   "scripts": {
