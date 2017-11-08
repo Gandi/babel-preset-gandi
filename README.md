@@ -1,12 +1,17 @@
-Babel preset for Gandi's JavaScript projects
-============================================
+# babel-preset-gandi
 
+Shareable [Babel](https://github.com/babel/babel) preset for [Gandi](https://github.com/Gandi).  
 Includes ES2017+, React, Flow, as well as common transforms and polyfills.
+
 
 ## Installation
 
 ``` sh
 $ npm install --save-dev @gandi/babel-preset-gandi
+```
+or
+``` sh
+$ yarn add --dev @gandi/babel-preset-gandi
 ```
 
 
@@ -59,3 +64,8 @@ _(People who have been involved in @gandi/babel-preset-gandi)_
 * Alexis Mineaud @cr0cK
 * Arthur Gautier @baloo
 * Timothée Pillard @ziir
+
+
+## License
+
+ISC.
