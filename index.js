@@ -8,6 +8,9 @@
  * https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
  * https://babeljs.io/docs/plugins/transform-decorators
  *
+ * [React/Flow]
+ * https://babeljs.io/docs/plugins/preset-react
+ *
  * [Other]
  * https://babeljs.io/docs/plugins/transform-runtime
  */
