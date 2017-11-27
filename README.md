@@ -33,7 +33,7 @@ Pass options to `babel-preset-env`
 }
 ```
 
-See the [full list of available options](https://github.com/babel/babel-preset-env#options).
+See the [full list of available options](https://github.com/babel/babel/tree/master/packages/babel-preset-env#options).
 
 
 ## Changelog
