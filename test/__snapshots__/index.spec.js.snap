@@ -1,65 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`transforms class properties: class properties 1`] = `
-"'use strict';
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+"var _classCallCheck = require(\\"@babel/runtime/helpers/classCallCheck\\");
 
 var A = function A() {
-        (0, _classCallCheck3.default)(this, A);
+  _classCallCheck(this, A);
 
-        this.a = function () {
-                return 'hello';
-        };
+  Object.defineProperty(this, \\"a\\", {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: function value() {
+      return 'hello';
+    }
+  });
 };"
 `;
 
 exports[`transforms decorators legacy: decorators legacy 1`] = `
-"\\"use strict\\";
-
-var _classCallCheck2 = require(\\"babel-runtime/helpers/classCallCheck\\");
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+"var _classCallCheck = require(\\"@babel/runtime/helpers/classCallCheck\\");
 
 var _class;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var A = decorated(_class = function A() {
-        (0, _classCallCheck3.default)(this, A);
+  _classCallCheck(this, A);
 }) || _class;"
 `;
 
-exports[`transforms flow: flow 1`] = `
-"'use strict';
+exports[`transforms flow: flow 1`] = `"var a = 'hello';"`;
 
-var a = 'hello';"
-`;
+exports[`transforms object rest spread: object rest spread 1`] = `
+"var _extends = require(\\"@babel/runtime/helpers/extends\\");
 
-exports[`transforms object reset spread: object reset spread 1`] = `
-"\\"use strict\\";
-
-var _extends2 = require(\\"babel-runtime/helpers/extends\\");
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var b = (0, _extends3.default)({}, a);"
+var b = _extends({}, a);"
 `;
 
 exports[`transforms react: react 1`] = `
-"\\"use strict\\";
-
-var A = function A() {
-      return React.createElement(
-            \\"div\\",
-            null,
-            \\"hello\\"
-      );
+"var A = function A() {
+  return React.createElement(\\"div\\", null, \\"hello\\");
 };"
 `;
