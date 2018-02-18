@@ -1,6 +1,9 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  - Upgrade to Babel 7.
+    Set modules to `false` (esm) by default.
 
 ## 2.2.0 - 2018-07-05
 ### Changed

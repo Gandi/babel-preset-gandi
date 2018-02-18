@@ -1,5 +1,5 @@
 /**
- * [ES2017+]
+ * [ES2018+]
  * https://babeljs.io/docs/plugins/preset-env
  *
  * [Experimental]
@@ -9,8 +9,11 @@
  * https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
  * https://babeljs.io/docs/plugins/transform-decorators
  *
- * [React/Flow]
+ * [React]
  * https://babeljs.io/docs/plugins/preset-react
+ *
+ * [Flow]
+ * https://babeljs.io/docs/plugins/preset-flow
  *
  * [Other]
  * https://babeljs.io/docs/plugins/transform-runtime
@@ -22,23 +25,27 @@ module.exports = (context, options) => {
       browsers: ['Firefox ESR', 'last 2 versions', '> 1%', 'not dead'],
       node: 8,
     },
+    modules: false,
   };
 
-  const presets = [['env', Object.assign(defaults, options)], 'react'];
+  const presets = [
+    ['@babel/env', Object.assign(defaults, options)],
+    '@babel/react',
+    '@babel/flow',
+  ];
 
   const plugins = [
     [
-      'transform-runtime',
+      '@babel/transform-runtime',
       {
         helpers: true,
         polyfill: true,
         regenerator: true,
       },
     ],
-    'transform-class-properties',
+    '@babel/proposal-object-rest-spread',
+    '@babel/proposal-class-properties',
     'transform-decorators-legacy',
-    'transform-object-rest-spread',
-    'syntax-dynamic-import',
   ];
 
   return {

@@ -1,5 +1,5 @@
 const cases = require('jest-in-case');
-const { transform } = require('babel-core');
+const { transform } = require('@babel/core');
 
 cases(
   'transforms',
@@ -22,12 +22,13 @@ cases(
       input: `
         // @flow
         type A = string
-        const a: A = 'hello'`,
+        const a: A = 'hello'
+      `,
     },
     {
       name: 'react',
       input: `
-      const A = () => <div>hello</div>
+        const A = () => <div>hello</div>
       `,
     },
     {
