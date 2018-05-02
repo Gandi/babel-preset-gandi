@@ -1,7 +1,11 @@
 # Change log
 
 ## [Unreleased]
-
+### Changed
+  * Slightly tweak Browserslist config to include Firefox ESR and exclude "dead" browsers:
+    "browsers from last 2 version query, but with less than 0.5% in global usage statistics
+    and without official support or updates for 24 months".
+    
 ## 2.0.0 - 2017-11-07
 ### Changed
   - Switch to `babel-preset-env`.

@@ -18,15 +18,12 @@
 module.exports = (context, options) => {
   const defaults = {
     targets: {
-      browsers: ['last 2 versions', '> 1%'],
+      browsers: ['Firefox ESR', 'last 2 versions', '> 1%', 'not dead'],
       node: 8,
     },
   };
 
-  const presets = [
-    ['env', Object.assign(defaults, options)],
-    'react'
-  ];
+  const presets = [['env', Object.assign(defaults, options)], 'react'];
 
   const plugins = [
     [
