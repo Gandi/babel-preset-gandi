@@ -31,8 +31,8 @@
     "babel-preset-react": "^6.3.13"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "jest": "^22.3.0",
+    "babel-core": "^6.26.3",
+    "jest": "^22.4.3",
     "jest-in-case": "^1.0.2"
   },
   "peerDependencies": {
