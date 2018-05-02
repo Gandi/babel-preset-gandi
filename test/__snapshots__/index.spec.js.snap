@@ -40,7 +40,7 @@ exports[`transforms flow: flow 1`] = `
 var a = 'hello';"
 `;
 
-exports[`transforms object reset spread: object reset spread 1`] = `
+exports[`transforms object rest spread: object rest spread 1`] = `
 "\\"use strict\\";
 
 var _extends2 = require(\\"babel-runtime/helpers/extends\\");
