@@ -18,7 +18,7 @@
 module.exports = (context, options) => {
   const defaults = {
     targets: {
-      browsers: ['Firefox ESR', 'last 2 versions', '> 1%', 'not dead'],
+      browsers: ['Firefox ESR', 'last 2 versions', '> 1%'],
       node: 8,
     },
   };
