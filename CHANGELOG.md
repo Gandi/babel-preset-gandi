@@ -1,6 +1,9 @@
 # Change log
 
 ## [Unreleased]
+### Added
+  - Add `babel-plugin-syntax-dynamic-import`.
+    Enables using `import('foo/bar')` dynamic import syntax.
 
 ## 2.0.0 - 2017-11-07
 ### Changed
