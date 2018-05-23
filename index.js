@@ -27,6 +27,7 @@ module.exports = (context, options) => {
 
   const plugins = [
     [
+      'syntax-dynamic-import',
       'transform-runtime',
       {
         helpers: true,

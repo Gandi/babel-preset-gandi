@@ -1,8 +1,12 @@
 # Change log
 
 ## [Unreleased]
+### Added
+  - Add `babel-plugin-syntax-dynamic-import`.
+    Enables using `import('foo/bar')` dynamic import syntax.
+
 ### Changed
-  * Slightly tweak Browserslist config to include Firefox ESR and exclude "dead" browsers:
+  - Slightly tweak Browserslist config to include Firefox ESR and exclude "dead" browsers:
     "browsers from last 2 version query, but with less than 0.5% in global usage statistics
     and without official support or updates for 24 months".
     
