@@ -3,6 +3,7 @@
  * https://babeljs.io/docs/plugins/preset-env
  *
  * [Experimental]
+ * https://babeljs.io/docs/plugins/syntax-dynamic-import
  * https://babeljs.io/docs/plugins/transform-object-rest-spread
  * https://babeljs.io/docs/plugins/transform-class-properties
  * https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
@@ -27,7 +28,6 @@ module.exports = (context, options) => {
 
   const plugins = [
     [
-      'syntax-dynamic-import',
       'transform-runtime',
       {
         helpers: true,
@@ -38,6 +38,7 @@ module.exports = (context, options) => {
     'transform-class-properties',
     'transform-decorators-legacy',
     'transform-object-rest-spread',
+    'syntax-dynamic-import',
   ];
 
   return {
