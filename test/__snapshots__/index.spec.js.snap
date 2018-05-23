@@ -34,6 +34,12 @@ var A = decorated(_class = function A() {
 }) || _class;"
 `;
 
+exports[`transforms dynamic imports: dynamic imports 1`] = `
+"'use strict';
+
+import('./a');"
+`;
+
 exports[`transforms flow: flow 1`] = `
 "'use strict';
 

@@ -43,5 +43,11 @@ cases(
         class A {}
       `,
     },
+    {
+      name: 'dynamic imports',
+      input: `
+        import('./a')
+      `,
+    },
   ]
 );
