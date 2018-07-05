@@ -1,8 +1,10 @@
 # Change log
 
 ## [Unreleased]
+
+## 2.2.0 - 2018-07-05
 ### Changed
-  * Slightly tweak Browserslist config to exclude "dead" browsers:  
+  - Slightly tweak Browserslist config to exclude "dead" browsers:  
     "browsers from last 2 version query, but with less than 0.5% in global usage statistics
     and without official support or updates for 24 months".                                 
 
