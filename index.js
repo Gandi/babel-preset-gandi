@@ -1,51 +1,50 @@
 /**
  * [ES2018+]
- * https://babeljs.io/docs/plugins/preset-env
+ * https://babeljs.io/docs/en/babel-preset-env
  *
- * [Experimental]
- * https://babeljs.io/docs/plugins/syntax-dynamic-import
- * https://babeljs.io/docs/plugins/transform-object-rest-spread
- * https://babeljs.io/docs/plugins/transform-class-properties
- * https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
- * https://babeljs.io/docs/plugins/transform-decorators
+ * [Proposals]
+ * https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import
+ * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
+ * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
  *
  * [React]
- * https://babeljs.io/docs/plugins/preset-react
+ * https://babeljs.io/docs/en/babel-preset-react
  *
  * [Flow]
- * https://babeljs.io/docs/plugins/preset-flow
+ * https://babeljs.io/docs/en/babel-preset-flow
  *
  * [Other]
- * https://babeljs.io/docs/plugins/transform-runtime
+ * https://babeljs.io/docs/en/babel-plugin-transform-runtime
  */
 
 module.exports = (context, options) => {
   const defaults = {
     targets: {
-      browsers: ['Firefox ESR', 'last 2 versions', '> 1%', 'not dead'],
+      browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
       node: 8,
     },
     modules: false,
   };
 
   const presets = [
-    ['@babel/env', Object.assign(defaults, options)],
-    '@babel/react',
-    '@babel/flow',
+    ['@babel/preset-env', Object.assign(defaults, options)],
+    '@babel/preset-react',
+    '@babel/preset-flow',
   ];
 
   const plugins = [
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-class-properties',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
     [
-      '@babel/transform-runtime',
+      '@babel/plugin-transform-runtime',
       {
+        corejs: false,
         helpers: true,
-        polyfill: true,
         regenerator: true,
+        useESModules: true,
       },
     ],
-    '@babel/proposal-object-rest-spread',
-    '@babel/proposal-class-properties',
-    'transform-decorators-legacy',
   ];
 
   return {
