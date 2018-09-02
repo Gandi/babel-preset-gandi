@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`transforms class properties: class properties 1`] = `
+exports[`class properties 1`] = `
 "import _classCallCheck from \\"@babel/runtime/helpers/esm/classCallCheck\\";
 import _defineProperty from \\"@babel/runtime/helpers/esm/defineProperty\\";
 
@@ -13,7 +13,7 @@ var A = function A() {
 };"
 `;
 
-exports[`transforms decorators legacy: decorators legacy 1`] = `
+exports[`decorators legacy 1`] = `
 "import _classCallCheck from \\"@babel/runtime/helpers/esm/classCallCheck\\";
 
 var _class;
@@ -23,17 +23,17 @@ var A = decorated(_class = function A() {
 }) || _class;"
 `;
 
-exports[`transforms dynamic imports: dynamic imports 1`] = `"import('./a');"`;
+exports[`dynamic imports 1`] = `"import('./a');"`;
 
-exports[`transforms flow: flow 1`] = `"var a = 'hello';"`;
+exports[`flow 1`] = `"var a = 'hello';"`;
 
-exports[`transforms object rest spread: object rest spread 1`] = `
+exports[`object rest spread 1`] = `
 "import _objectSpread from \\"@babel/runtime/helpers/esm/objectSpread\\";
 
 var b = _objectSpread({}, a);"
 `;
 
-exports[`transforms react: react 1`] = `
+exports[`react 1`] = `
 "var A = function A() {
   return React.createElement(\\"div\\", null, \\"hello\\");
 };"
