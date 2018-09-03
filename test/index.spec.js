@@ -1,6 +1,6 @@
 const { transform } = require('@babel/core');
 
-test.each([
+const cases = [
   [
     'object rest spread',
     `
@@ -40,9 +40,19 @@ test.each([
       import('./a')
     `,
   ],
-])('%s', (name, input) => {
+];
+
+test.each(cases)('%s', (name, input) => {
   const { code } = transform(input, {
     presets: [require('../')],
+  });
+
+  expect(code).toMatchSnapshot();
+});
+
+test.each(cases)('commonjs: %s', (name, input) => {
+  const { code } = transform(input, {
+    presets: [[require('../'), { modules: 'commonjs' }]],
   });
 
   expect(code).toMatchSnapshot();

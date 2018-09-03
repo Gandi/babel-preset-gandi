@@ -13,6 +13,67 @@ var A = function A() {
 };"
 `;
 
+exports[`commonjs: class properties 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+
+var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/classCallCheck\\"));
+
+var _defineProperty2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/defineProperty\\"));
+
+var A = function A() {
+  (0, _classCallCheck2.default)(this, A);
+  (0, _defineProperty2.default)(this, \\"a\\", function () {
+    return 'hello';
+  });
+};"
+`;
+
+exports[`commonjs: decorators legacy 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+
+var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/classCallCheck\\"));
+
+var _class;
+
+var A = decorated(_class = function A() {
+  (0, _classCallCheck2.default)(this, A);
+}) || _class;"
+`;
+
+exports[`commonjs: dynamic imports 1`] = `
+"\\"use strict\\";
+
+import('./a');"
+`;
+
+exports[`commonjs: flow 1`] = `
+"\\"use strict\\";
+
+var a = 'hello';"
+`;
+
+exports[`commonjs: object rest spread 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+
+var _objectSpread2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/objectSpread\\"));
+
+var b = (0, _objectSpread2.default)({}, a);"
+`;
+
+exports[`commonjs: react 1`] = `
+"\\"use strict\\";
+
+var A = function A() {
+  return React.createElement(\\"div\\", null, \\"hello\\");
+};"
+`;
+
 exports[`decorators legacy 1`] = `
 "import _classCallCheck from \\"@babel/runtime/helpers/esm/classCallCheck\\";
 
