@@ -36,13 +36,13 @@ module.exports = (context, options) => {
     useESModules: envOpts.modules === false,
   };
 
-  const presets = [
+  let presets = [
     ['@babel/preset-env', envOpts],
     '@babel/preset-react',
     '@babel/preset-flow',
   ];
 
-  const plugins = [
+  let plugins = [
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-class-properties',
     ['@babel/plugin-proposal-decorators', { legacy: true }],

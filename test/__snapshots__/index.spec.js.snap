@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Runtime ponyfills 1`] = `
+"import _Promise from \\"@babel/runtime-corejs2/core-js/promise\\";
+import _Set from \\"@babel/runtime-corejs2/core-js/set\\";
+import _Map from \\"@babel/runtime-corejs2/core-js/map\\";
+new _Map();
+new _Set();
+new _Promise();"
+`;
+
 exports[`class properties 1`] = `
 "import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
 import _defineProperty from \\"@babel/runtime-corejs2/helpers/esm/defineProperty\\";
@@ -11,6 +20,22 @@ var A = function A() {
     return 'hello';
   });
 };"
+`;
+
+exports[`commonjs: Runtime ponyfills 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
+
+var _promise = _interopRequireDefault(require(\\"@babel/runtime-corejs2/core-js/promise\\"));
+
+var _set = _interopRequireDefault(require(\\"@babel/runtime-corejs2/core-js/set\\"));
+
+var _map = _interopRequireDefault(require(\\"@babel/runtime-corejs2/core-js/map\\"));
+
+new _map.default();
+new _set.default();
+new _promise.default();"
 `;
 
 exports[`commonjs: class properties 1`] = `

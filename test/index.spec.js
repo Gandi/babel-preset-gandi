@@ -1,24 +1,25 @@
 const { transform } = require('@babel/core');
+const preset = require('../');
 
-const cases = [
-  [
-    'object rest spread',
-    `
-      const b = {...a}
-    `,
-  ],
+let cases = [
   [
     'flow',
     `
       // @flow
       type A = string
-      const a: A = 'hello'
+      let a: A = 'hello'
     `,
   ],
   [
     'react',
     `
-      const A = () => <div>hello</div>
+      let A = () => <div>hello</div>
+    `,
+  ],
+  [
+    'object rest spread',
+    `
+      let b = {...a}
     `,
   ],
   [
@@ -40,19 +41,27 @@ const cases = [
       import('./a')
     `,
   ],
+  [
+    'Runtime ponyfills',
+    `
+      new Map()
+      new Set()
+      new Promise()
+    `,
+  ],
 ];
 
 test.each(cases)('%s', (name, input) => {
-  const { code } = transform(input, {
-    presets: [require('../')],
+  let { code } = transform(input, {
+    presets: [preset],
   });
 
   expect(code).toMatchSnapshot();
 });
 
 test.each(cases)('commonjs: %s', (name, input) => {
-  const { code } = transform(input, {
-    presets: [[require('../'), { modules: 'commonjs' }]],
+  let { code } = transform(input, {
+    presets: [[preset, { modules: 'commonjs' }]],
   });
 
   expect(code).toMatchSnapshot();
