@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`class properties 1`] = `
-"import _classCallCheck from \\"@babel/runtime/helpers/esm/classCallCheck\\";
-import _defineProperty from \\"@babel/runtime/helpers/esm/defineProperty\\";
+"import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
+import _defineProperty from \\"@babel/runtime-corejs2/helpers/esm/defineProperty\\";
 
 var A = function A() {
   _classCallCheck(this, A);
@@ -16,11 +16,11 @@ var A = function A() {
 exports[`commonjs: class properties 1`] = `
 "\\"use strict\\";
 
-var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
 
-var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/classCallCheck\\"));
+var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/classCallCheck\\"));
 
-var _defineProperty2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/defineProperty\\"));
+var _defineProperty2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/defineProperty\\"));
 
 var A = function A() {
   (0, _classCallCheck2.default)(this, A);
@@ -33,9 +33,9 @@ var A = function A() {
 exports[`commonjs: decorators legacy 1`] = `
 "\\"use strict\\";
 
-var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
 
-var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/classCallCheck\\"));
+var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/classCallCheck\\"));
 
 var _class;
 
@@ -59,9 +59,9 @@ var a = 'hello';"
 exports[`commonjs: object rest spread 1`] = `
 "\\"use strict\\";
 
-var _interopRequireDefault = require(\\"@babel/runtime/helpers/interopRequireDefault\\");
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
 
-var _objectSpread2 = _interopRequireDefault(require(\\"@babel/runtime/helpers/esm/objectSpread\\"));
+var _objectSpread2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/objectSpread\\"));
 
 var b = (0, _objectSpread2.default)({}, a);"
 `;
@@ -75,7 +75,7 @@ var A = function A() {
 `;
 
 exports[`decorators legacy 1`] = `
-"import _classCallCheck from \\"@babel/runtime/helpers/esm/classCallCheck\\";
+"import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
 
 var _class;
 
@@ -89,7 +89,7 @@ exports[`dynamic imports 1`] = `"import('./a');"`;
 exports[`flow 1`] = `"var a = 'hello';"`;
 
 exports[`object rest spread 1`] = `
-"import _objectSpread from \\"@babel/runtime/helpers/esm/objectSpread\\";
+"import _objectSpread from \\"@babel/runtime-corejs2/helpers/esm/objectSpread\\";
 
 var b = _objectSpread({}, a);"
 `;

@@ -18,16 +18,26 @@
  */
 
 module.exports = (context, options) => {
-  const defaults = {
-    targets: {
-      browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
-      node: 8,
+  let envOpts = Object.assign(
+    {
+      targets: {
+        browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
+        node: 8,
+      },
+      modules: false,
     },
-    modules: false,
+    options
+  );
+
+  let runtimeOpts = {
+    corejs: 2,
+    helpers: true,
+    regenerator: true,
+    useESModules: envOpts.modules === false,
   };
 
   const presets = [
-    ['@babel/preset-env', Object.assign(defaults, options)],
+    ['@babel/preset-env', envOpts],
     '@babel/preset-react',
     '@babel/preset-flow',
   ];
@@ -36,15 +46,7 @@ module.exports = (context, options) => {
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-class-properties',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
-    [
-      '@babel/plugin-transform-runtime',
-      {
-        corejs: false,
-        helpers: true,
-        regenerator: true,
-        useESModules: true,
-      },
-    ],
+    ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
 
   return {
