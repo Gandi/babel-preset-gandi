@@ -18,6 +18,11 @@
   "author": "Gandi",
   "license": "ISC",
   "private": false,
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "jest"
