@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 3.0.0-beta.3 - 2018-11-08
 ### Changed
   - Don't forces `modules` to `false` (esm) by default.
     This follow the preset-env defaults, and might require less changes while upgrading.
