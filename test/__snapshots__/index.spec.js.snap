@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Runtime ponyfills 1`] = `
-"import _Promise from \\"@babel/runtime-corejs2/core-js/promise\\";
-import _Set from \\"@babel/runtime-corejs2/core-js/set\\";
-import _Map from \\"@babel/runtime-corejs2/core-js/map\\";
-new _Map();
-new _Set();
-new _Promise();"
-`;
-
-exports[`class properties 1`] = `
-"import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
-import _defineProperty from \\"@babel/runtime-corejs2/helpers/esm/defineProperty\\";
-
-var A = function A() {
-  _classCallCheck(this, A);
-
-  _defineProperty(this, \\"a\\", function () {
-    return 'hello';
-  });
-};"
-`;
-
-exports[`commonjs: Runtime ponyfills 1`] = `
 "\\"use strict\\";
 
 var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
@@ -38,7 +16,7 @@ new _set.default();
 new _promise.default();"
 `;
 
-exports[`commonjs: class properties 1`] = `
+exports[`class properties 1`] = `
 "\\"use strict\\";
 
 var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
@@ -55,7 +33,7 @@ var A = function A() {
 };"
 `;
 
-exports[`commonjs: decorators legacy 1`] = `
+exports[`decorators legacy 1`] = `
 "\\"use strict\\";
 
 var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
@@ -69,37 +47,35 @@ var A = decorated(_class = function A() {
 }) || _class;"
 `;
 
-exports[`commonjs: dynamic imports 1`] = `
+exports[`dynamic imports 1`] = `
 "\\"use strict\\";
 
 import('./a');"
 `;
 
-exports[`commonjs: flow 1`] = `
-"\\"use strict\\";
-
-var a = 'hello';"
+exports[`esm: Runtime ponyfills 1`] = `
+"import _Promise from \\"@babel/runtime-corejs2/core-js/promise\\";
+import _Set from \\"@babel/runtime-corejs2/core-js/set\\";
+import _Map from \\"@babel/runtime-corejs2/core-js/map\\";
+new _Map();
+new _Set();
+new _Promise();"
 `;
 
-exports[`commonjs: object rest spread 1`] = `
-"\\"use strict\\";
-
-var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
-
-var _objectSpread2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/objectSpread\\"));
-
-var b = (0, _objectSpread2.default)({}, a);"
-`;
-
-exports[`commonjs: react 1`] = `
-"\\"use strict\\";
+exports[`esm: class properties 1`] = `
+"import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
+import _defineProperty from \\"@babel/runtime-corejs2/helpers/esm/defineProperty\\";
 
 var A = function A() {
-  return React.createElement(\\"div\\", null, \\"hello\\");
+  _classCallCheck(this, A);
+
+  _defineProperty(this, \\"a\\", function () {
+    return 'hello';
+  });
 };"
 `;
 
-exports[`decorators legacy 1`] = `
+exports[`esm: decorators legacy 1`] = `
 "import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
 
 var _class;
@@ -109,18 +85,42 @@ var A = decorated(_class = function A() {
 }) || _class;"
 `;
 
-exports[`dynamic imports 1`] = `"import('./a');"`;
+exports[`esm: dynamic imports 1`] = `"import('./a');"`;
 
-exports[`flow 1`] = `"var a = 'hello';"`;
+exports[`esm: flow 1`] = `"var a = 'hello';"`;
 
-exports[`object rest spread 1`] = `
+exports[`esm: object rest spread 1`] = `
 "import _objectSpread from \\"@babel/runtime-corejs2/helpers/esm/objectSpread\\";
 
 var b = _objectSpread({}, a);"
 `;
 
-exports[`react 1`] = `
+exports[`esm: react 1`] = `
 "var A = function A() {
+  return React.createElement(\\"div\\", null, \\"hello\\");
+};"
+`;
+
+exports[`flow 1`] = `
+"\\"use strict\\";
+
+var a = 'hello';"
+`;
+
+exports[`object rest spread 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
+
+var _objectSpread2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/objectSpread\\"));
+
+var b = (0, _objectSpread2.default)({}, a);"
+`;
+
+exports[`react 1`] = `
+"\\"use strict\\";
+
+var A = function A() {
   return React.createElement(\\"div\\", null, \\"hello\\");
 };"
 `;

@@ -29,7 +29,7 @@ Pass options to `babel-preset-env`
 
 ``` json
 {
-  "presets": [["@gandi/gandi", { "modules": "commonjs" }]]
+  "presets": [["@gandi/gandi", { "modules": "false" }]]
 }
 ```
 

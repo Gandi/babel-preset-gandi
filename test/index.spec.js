@@ -59,9 +59,9 @@ test.each(cases)('%s', (name, input) => {
   expect(code).toMatchSnapshot();
 });
 
-test.each(cases)('commonjs: %s', (name, input) => {
+test.each(cases)('esm: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { modules: 'commonjs' }]],
+    presets: [[preset, { modules: false }]],
   });
 
   expect(code).toMatchSnapshot();
