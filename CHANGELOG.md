@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## 3.0.0-beta.3 - 2018-11-08
+### Changed
+  - Don't forces `modules` to `false` (esm) by default.
+    This follow the preset-env defaults, and might require less changes while upgrading.
+  - Set `node` to version `10` in `targets` config.
+
+## 3.0.0-beta.2 - 2018-09-11
+### Changed
+  - Upgrade to Babel 7 stable.
+    **BREAKING** Use new `@babel/runtime-corejs2`.
+
+## 3.0.0-beta.1 - 2018-03-12
+### Changed
+  - Upgrade to Babel 7 beta.
+    **BREAKING** Set modules to `false` (esm) by default. (reverted)
+
 ## 2.2.0 - 2018-07-05
 ### Changed
   - Slightly tweak Browserslist config to exclude "dead" browsers:  

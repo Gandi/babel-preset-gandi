@@ -1,44 +1,51 @@
 /**
- * [ES2017+]
- * https://babeljs.io/docs/plugins/preset-env
+ * [ES2018+]
+ * https://babeljs.io/docs/en/babel-preset-env
  *
- * [Experimental]
- * https://babeljs.io/docs/plugins/syntax-dynamic-import
- * https://babeljs.io/docs/plugins/transform-object-rest-spread
- * https://babeljs.io/docs/plugins/transform-class-properties
- * https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy
- * https://babeljs.io/docs/plugins/transform-decorators
+ * [Proposals]
+ * https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import
+ * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
+ * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
  *
- * [React/Flow]
- * https://babeljs.io/docs/plugins/preset-react
+ * [React]
+ * https://babeljs.io/docs/en/babel-preset-react
+ *
+ * [Flow]
+ * https://babeljs.io/docs/en/babel-preset-flow
  *
  * [Other]
- * https://babeljs.io/docs/plugins/transform-runtime
+ * https://babeljs.io/docs/en/babel-plugin-transform-runtime
  */
 
 module.exports = (context, options) => {
-  const defaults = {
-    targets: {
-      browsers: ['Firefox ESR', 'last 2 versions', '> 1%', 'not dead'],
-      node: 8,
+  let envOpts = Object.assign(
+    {
+      targets: {
+        browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
+        node: 10,
+      },
     },
+    options
+  );
+
+  let runtimeOpts = {
+    corejs: 2,
+    helpers: true,
+    regenerator: true,
+    useESModules: envOpts.modules === false,
   };
 
-  const presets = [['env', Object.assign(defaults, options)], 'react'];
+  let presets = [
+    ['@babel/preset-env', envOpts],
+    '@babel/preset-react',
+    '@babel/preset-flow',
+  ];
 
-  const plugins = [
-    [
-      'transform-runtime',
-      {
-        helpers: true,
-        polyfill: true,
-        regenerator: true,
-      },
-    ],
-    'transform-class-properties',
-    'transform-decorators-legacy',
-    'transform-object-rest-spread',
-    'syntax-dynamic-import',
+  let plugins = [
+    '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-class-properties',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
 
   return {

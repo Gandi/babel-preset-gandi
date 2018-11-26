@@ -1,53 +1,68 @@
-const cases = require('jest-in-case');
-const { transform } = require('babel-core');
+const { transform } = require('@babel/core');
+const preset = require('../');
 
-cases(
-  'transforms',
-  ({ name, input }) => {
-    const { code } = transform(input, {
-      presets: [require('../')],
-    });
-
-    expect(code).toMatchSnapshot(name);
-  },
+let cases = [
   [
-    {
-      name: 'object rest spread',
-      input: `
-        const b = {...a}
-      `,
-    },
-    {
-      name: 'flow',
-      input: `
-        // @flow
-        type A = string
-        const a: A = 'hello'`,
-    },
-    {
-      name: 'react',
-      input: `
-      const A = () => <div>hello</div>
-      `,
-    },
-    {
-      name: 'class properties',
-      input: `
-        class A { a = () => 'hello' }
-      `,
-    },
-    {
-      name: 'decorators legacy',
-      input: `
-        @decorated
-        class A {}
-      `,
-    },
-    {
-      name: 'dynamic imports',
-      input: `
-        import('./a')
-      `,
-    },
-  ]
-);
+    'flow',
+    `
+      // @flow
+      type A = string
+      let a: A = 'hello'
+    `,
+  ],
+  [
+    'react',
+    `
+      let A = () => <div>hello</div>
+    `,
+  ],
+  [
+    'object rest spread',
+    `
+      let b = {...a}
+    `,
+  ],
+  [
+    'class properties',
+    `
+      class A { a = () => 'hello' }
+    `,
+  ],
+  [
+    'decorators legacy',
+    `
+      @decorated
+      class A {}
+    `,
+  ],
+  [
+    'dynamic imports',
+    `
+      import('./a')
+    `,
+  ],
+  [
+    'Runtime ponyfills',
+    `
+      new Map()
+      new Set()
+      new Promise()
+    `,
+  ],
+];
+
+test.each(cases)('%s', (name, input) => {
+  let { code } = transform(input, {
+    presets: [preset],
+  });
+
+  expect(code).toMatchSnapshot();
+});
+
+test.each(cases)('esm: %s', (name, input) => {
+  let { code } = transform(input, {
+    presets: [[preset, { modules: false }]],
+  });
+
+  expect(code).toMatchSnapshot();
+});
