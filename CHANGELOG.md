@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Added
+  * Added "do expressions" proposal plugin.
 
 ## 3.0.0 - 2018-11-26
 
