@@ -23,13 +23,12 @@ var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRe
 
 var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/classCallCheck\\"));
 
-var _defineProperty2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/defineProperty\\"));
-
 var A = function A() {
   (0, _classCallCheck2.default)(this, A);
-  (0, _defineProperty2.default)(this, \\"a\\", function () {
+
+  this.a = function () {
     return 'hello';
-  });
+  };
 };"
 `;
 
@@ -64,14 +63,13 @@ new _Promise();"
 
 exports[`esm: class properties 1`] = `
 "import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
-import _defineProperty from \\"@babel/runtime-corejs2/helpers/esm/defineProperty\\";
 
 var A = function A() {
   _classCallCheck(this, A);
 
-  _defineProperty(this, \\"a\\", function () {
+  this.a = function () {
     return 'hello';
-  });
+  };
 };"
 `;
 
