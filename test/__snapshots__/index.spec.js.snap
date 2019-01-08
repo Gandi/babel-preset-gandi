@@ -47,6 +47,12 @@ var A = decorated(_class = function A() {
 }) || _class;"
 `;
 
+exports[`do expressions 1`] = `
+"\\"use strict\\";
+
+var a = b ? 'yep' : 'nope';"
+`;
+
 exports[`dynamic imports 1`] = `
 "\\"use strict\\";
 
@@ -84,6 +90,8 @@ var A = decorated(_class = function A() {
   _classCallCheck(this, A);
 }) || _class;"
 `;
+
+exports[`esm: do expressions 1`] = `"var a = b ? 'yep' : 'nope';"`;
 
 exports[`esm: dynamic imports 1`] = `"import('./a');"`;
 

@@ -5,6 +5,7 @@
  * [Proposals]
  * https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import
  * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
+ * https://babeljs.io/docs/en/babel-plugin-proposal-do-expressions
  * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
  *
  * [React]
@@ -44,6 +45,7 @@ module.exports = (context, options) => {
   let plugins = [
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-do-expressions',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-transform-runtime', runtimeOpts],
   ];

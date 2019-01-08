@@ -29,6 +29,19 @@ let cases = [
     `,
   ],
   [
+    'do expressions',
+    `
+      let a = do {
+        if (b) {
+          'yep';
+        }
+        else {
+          'nope';
+        }
+      };
+    `,
+  ],
+  [
     'decorators legacy',
     `
       @decorated
