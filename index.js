@@ -44,6 +44,7 @@ module.exports = (context, options) => {
 
   let plugins = [
     '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-transform-flow-strip-types',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-runtime', runtimeOpts],

@@ -49,6 +49,16 @@ let cases = [
       new Promise()
     `,
   ],
+  [
+    'Regression: Flow void class properties',
+    `
+      // @flow
+      type Props = {}
+      class C {
+        props: Props
+      }
+    `,
+  ],
 ];
 
 test.each(cases)('%s', (name, input) => {

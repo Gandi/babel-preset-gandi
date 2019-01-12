@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Regression: Flow void class properties 1`] = `
+"\\"use strict\\";
+
+var _interopRequireDefault = require(\\"@babel/runtime-corejs2/helpers/interopRequireDefault\\");
+
+var _classCallCheck2 = _interopRequireDefault(require(\\"@babel/runtime-corejs2/helpers/classCallCheck\\"));
+
+var C = function C() {
+  (0, _classCallCheck2.default)(this, C);
+};"
+`;
+
 exports[`Runtime ponyfills 1`] = `
 "\\"use strict\\";
 
@@ -50,6 +62,14 @@ exports[`dynamic imports 1`] = `
 "\\"use strict\\";
 
 import('./a');"
+`;
+
+exports[`esm: Regression: Flow void class properties 1`] = `
+"import _classCallCheck from \\"@babel/runtime-corejs2/helpers/esm/classCallCheck\\";
+
+var C = function C() {
+  _classCallCheck(this, C);
+};"
 `;
 
 exports[`esm: Runtime ponyfills 1`] = `
