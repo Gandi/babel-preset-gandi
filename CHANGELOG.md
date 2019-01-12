@@ -5,6 +5,7 @@
   * Fix plugins order and compatibility between `plugin-proposal-decorators` and
     `@babel/plugin-proposal-class-properties` since we are using hte `legacy` mode.
     See https://github.com/babel/babel/issues/9297
+  * Ensure new Babel helpers won't be inlined by specifying the runtime version we use.
 
 ## 3.0.0 - 2018-11-26
 
