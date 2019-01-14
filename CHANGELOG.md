@@ -1,6 +1,15 @@
 # Change log
 
 ## [Unreleased]
+### Fixed
+  * Fix plugins order and compatibility between `plugin-proposal-decorators` and
+    `@babel/plugin-proposal-class-properties` since we are using the `legacy` mode.
+    See https://github.com/babel/babel/issues/9297
+  * Ensure new Babel helpers won't get inlined by specifying the runtime version we use.
+  * Ensure legacy Flow annotations for React props won't get transformed to void
+    class properties.
+    See https://github.com/babel/babel/issues/8417  
+    Wait for https://github.com/babel/babel/pull/9141
 
 ## 3.0.0 - 2018-11-26
 

@@ -33,6 +33,7 @@ module.exports = (context, options) => {
     helpers: true,
     regenerator: true,
     useESModules: envOpts.modules === false,
+    version: '7.2.0',
   };
 
   let presets = [
@@ -43,8 +44,9 @@ module.exports = (context, options) => {
 
   let plugins = [
     '@babel/plugin-syntax-dynamic-import',
-    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-transform-flow-strip-types',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
 
