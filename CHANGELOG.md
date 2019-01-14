@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 3.0.1 - 2019-01-14
 ### Fixed
   * Fix plugins order and compatibility between `plugin-proposal-decorators` and
     `@babel/plugin-proposal-class-properties` since we are using the `legacy` mode.
