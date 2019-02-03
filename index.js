@@ -6,6 +6,7 @@
  * https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import
  * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
  * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
+ * https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining.html
  *
  * [React]
  * https://babeljs.io/docs/en/babel-preset-react
@@ -44,6 +45,7 @@ module.exports = (context, options) => {
 
   let plugins = [
     '@babel/plugin-syntax-dynamic-import',
+    '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-transform-flow-strip-types',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
