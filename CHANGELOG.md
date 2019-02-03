@@ -2,7 +2,8 @@
 
 ## [Unreleased]
 ### Added
-  * Added optional chaining proposal transform plugin.
+  * Added optional-chaining proposal transform plugin.
+  * Added nullish-coalescing-operator proposal transform plugin.
 
 ## 3.0.2 - 2019-01-22
 ### Changed

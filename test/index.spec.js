@@ -61,6 +61,14 @@ let cases = [
     `,
   ],
   [
+    'nullish coalescing',
+    `
+    let obj = {};
+
+    let foo = obj.foo ?? 'default';
+    `,
+  ],
+  [
     'Runtime ponyfills',
     `
       new Map()
