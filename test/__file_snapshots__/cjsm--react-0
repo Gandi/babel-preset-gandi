@@ -1,0 +1,5 @@
+"use strict";
+
+var A = function A() {
+  return React.createElement("div", null, "hello");
+};

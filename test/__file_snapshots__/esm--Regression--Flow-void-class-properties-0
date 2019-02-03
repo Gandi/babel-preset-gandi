@@ -1,0 +1,5 @@
+import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
+
+var C = function C() {
+  _classCallCheck(this, C);
+};

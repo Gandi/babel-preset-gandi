@@ -1,0 +1,3 @@
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread";
+
+var b = _objectSpread({}, a);

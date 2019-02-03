@@ -1,5 +1,8 @@
 const { transform } = require('@babel/core');
+const { toMatchFile } = require('jest-file-snapshot');
 const preset = require('../');
+
+expect.extend({ toMatchFile });
 
 let cases = [
   [
@@ -61,12 +64,12 @@ let cases = [
   ],
 ];
 
-test.each(cases)('%s', (name, input) => {
+test.each(cases)('cjsm: %s', (name, input) => {
   let { code } = transform(input, {
     presets: [preset],
   });
 
-  expect(code).toMatchSnapshot();
+  expect(code).toMatchFile();
 });
 
 test.each(cases)('esm: %s', (name, input) => {
@@ -74,5 +77,5 @@ test.each(cases)('esm: %s', (name, input) => {
     presets: [[preset, { modules: false }]],
   });
 
-  expect(code).toMatchSnapshot();
+  expect(code).toMatchFile();
 });

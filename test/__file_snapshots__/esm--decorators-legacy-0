@@ -1,0 +1,7 @@
+import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
+
+var _class;
+
+var A = decorated(_class = function A() {
+  _classCallCheck(this, A);
+}) || _class;
