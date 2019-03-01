@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 3.1.0 - 2019-03-01
 ### Added
   * Added optional-chaining proposal transform plugin.
   * Added nullish-coalescing-operator proposal transform plugin.
