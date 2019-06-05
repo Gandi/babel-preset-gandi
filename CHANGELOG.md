@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## 3.2.1 - 2019-06-05
+### Fixed
+  * Force update locked dependencies, should fix npm security warnings.
+
 ## 3.2.0 - 2019-03-28
 ### Changed
   * Babel `7.4.x` upgrades.
