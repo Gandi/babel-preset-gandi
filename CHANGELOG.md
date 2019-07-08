@@ -1,6 +1,9 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Babel `7.5.x` upgrades.
+    Adding `plugin-dynamic-import-node` nanually for `commonjs` envs is no longer required.
 
 ## 3.2.1 - 2019-06-05
 ### Fixed

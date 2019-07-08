@@ -3,7 +3,6 @@
  * https://babeljs.io/docs/en/babel-preset-env
  *
  * [Proposals]
- * https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import
  * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
  * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
  * https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining
@@ -35,7 +34,7 @@ module.exports = (context, options) => {
     helpers: true,
     regenerator: true,
     useESModules: envOpts.modules === false,
-    version: '7.4.0',
+    version: '7.5.0',
   };
 
   let presets = [
@@ -45,7 +44,6 @@ module.exports = (context, options) => {
   ];
 
   let plugins = [
-    '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-transform-flow-strip-types',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',
