@@ -1,9 +1,10 @@
 import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
+import _defineProperty from "@babel/runtime-corejs2/helpers/esm/defineProperty";
 
 var A = function A() {
   _classCallCheck(this, A);
 
-  this.a = function () {
+  _defineProperty(this, "a", function () {
     return 'hello';
-  };
+  });
 };

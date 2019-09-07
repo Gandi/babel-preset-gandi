@@ -1,7 +1,13 @@
 # Change log
 
 ## [Unreleased]
-
+### Changed
+  * **BREAKING**
+    Remove the decorators proposal plugin.
+    We were stuck to the legacy mode, which forced us to use the loose mode of
+    the class properties plugin. This caused all sort of issues in the past.
+    See [#12](https://github.com/Gandi/babel-preset-gandi/pull/12)
+    
 ## 3.4.0 - 2019-09-07
 ### Changed
   * Babel `7.6.x` upgrades.

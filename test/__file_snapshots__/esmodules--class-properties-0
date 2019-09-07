@@ -1,6 +1,8 @@
+import _defineProperty from "@babel/runtime-corejs2/helpers/esm/defineProperty";
+
 class A {
   constructor() {
-    this.a = () => 'hello';
+    _defineProperty(this, "a", () => 'hello');
   }
 
 }
