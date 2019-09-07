@@ -103,3 +103,11 @@ test.each(cases)('esm: %s', (name, input) => {
 
   expect(code).toMatchFile();
 });
+
+test.each(cases)('esmodules: %s', (name, input) => {
+  let { code } = transform(input, {
+    presets: [[preset, { modules: false, targets: { esmodules: true } }]],
+  });
+
+  expect(code).toMatchFile();
+});

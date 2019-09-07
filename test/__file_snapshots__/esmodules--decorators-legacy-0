@@ -1,0 +1,3 @@
+var _class;
+
+var A = decorated(_class = class A {}) || _class;
