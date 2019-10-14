@@ -18,6 +18,10 @@
  * https://babeljs.io/docs/en/babel-plugin-transform-runtime
  */
 
+/**
+ * 1. Ensure all helpers are imported instead of inlined.
+ *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
+ */
 module.exports = (context, options) => {
   let envOpts = Object.assign(
     {
@@ -34,7 +38,7 @@ module.exports = (context, options) => {
     helpers: true,
     regenerator: true,
     useESModules: envOpts.modules === false,
-    version: '7.6.0',
+    version: '7.6.0', // 1
   };
 
   let presets = [
