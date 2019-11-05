@@ -20,6 +20,12 @@ let cases = [
     `,
   ],
   [
+    'react spread',
+    `
+      <div a {...b}>hello</div>
+    `,
+  ],
+  [
     'object rest spread',
     `
       let b = {...a}
