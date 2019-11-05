@@ -43,7 +43,7 @@ module.exports = (context, options) => {
 
   let presets = [
     ['@babel/preset-env', envOpts],
-    '@babel/preset-react',
+    ['@babel/preset-react', { useSpread: true }],
     '@babel/preset-flow',
   ];
 

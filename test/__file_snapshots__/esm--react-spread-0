@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
-React.createElement("div", _extends({
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread2";
+React.createElement("div", _objectSpread({
   a: true
 }, b), "hello");
