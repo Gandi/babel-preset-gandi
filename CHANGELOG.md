@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Babel `7.7.x` upgrades.
 
 ## 3.4.0 - 2019-09-07
 ### Changed

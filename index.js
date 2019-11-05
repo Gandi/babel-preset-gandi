@@ -38,7 +38,7 @@ module.exports = (context, options) => {
     helpers: true,
     regenerator: true,
     useESModules: envOpts.modules === false,
-    version: '7.6.0', // 1
+    version: '7.7.0', // 1
   };
 
   let presets = [
