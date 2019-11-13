@@ -75,6 +75,16 @@ let cases = [
     `,
   ],
   [
+    'async await',
+    `
+    async function a() {
+      await b();
+    }
+
+    a();
+    `,
+  ],
+  [
     'Runtime ponyfills',
     `
       new Map()
