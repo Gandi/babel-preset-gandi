@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Use `@babel/preset-modules` instead of `@babel/preset-env` for `esmodules` target.
 
 ## 3.6.0 - 2020-01-13
 ### Changed

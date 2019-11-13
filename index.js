@@ -27,7 +27,7 @@
  *    This is to avoid the `undefined` properties issue with old Flow props
  *    syntax: `class A { props: Props }`.
  */
-module.exports = (context, options) => {
+module.exports = (context, options = {}) => {
   let envOpts = Object.assign(
     {
       targets: {
@@ -38,6 +38,8 @@ module.exports = (context, options) => {
     options
   );
 
+  let { esmodules } = envOpts.targets;
+
   let runtimeOpts = {
     corejs: 2,
     helpers: true,
@@ -47,7 +49,7 @@ module.exports = (context, options) => {
   };
 
   let presets = [
-    ['@babel/preset-env', envOpts],
+    esmodules ? '@babel/preset-modules' : ['@babel/preset-env', envOpts],
     '@babel/preset-react',
     '@babel/preset-flow',
   ];

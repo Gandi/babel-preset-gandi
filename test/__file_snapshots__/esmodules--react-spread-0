@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
-React.createElement("div", _extends({
+import _Object$assign from "@babel/runtime-corejs2/core-js/object/assign";
+React.createElement("div", _Object$assign({
   a: true
 }, b), "hello");

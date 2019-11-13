@@ -1,1 +1,1 @@
-var A = () => React.createElement("div", null, "hello");
+let A = () => React.createElement("div", null, "hello");
