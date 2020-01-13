@@ -38,6 +38,12 @@ let cases = [
     `,
   ],
   [
+    'static class properties',
+    `
+      class A { static a = 'hello' }
+    `,
+  ],
+  [
     'decorators legacy',
     `
       @decorated
