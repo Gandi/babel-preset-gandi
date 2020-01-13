@@ -1,14 +1,5 @@
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
 
-function a() {
-  return _a.apply(this, arguments);
-}
-
-function _a() {
-  _a = _asyncToGenerator(function* () {
-    yield b();
-  });
-  return _a.apply(this, arguments);
-}
-
-a();
+_asyncToGenerator(function* () {
+  yield foo();
+})();

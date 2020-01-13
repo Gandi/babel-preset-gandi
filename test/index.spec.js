@@ -77,11 +77,9 @@ let cases = [
   [
     'async await',
     `
-    async function a() {
-      await b();
-    }
-
-    a();
+    (async function() {
+      await foo();
+    }());
     `,
   ],
   [

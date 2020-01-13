@@ -1,12 +1,10 @@
 /**
- * [ES2018+]
+ * [ES2020+]
  * https://babeljs.io/docs/en/babel-preset-env
  *
  * [Proposals]
  * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
  * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
- * https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining
- * https://babeljs.io/docs/en/babel-plugin-proposal-nullish-coalescing-operator
  *
  * [React]
  * https://babeljs.io/docs/en/babel-preset-react
@@ -45,7 +43,7 @@ module.exports = (context, options) => {
     helpers: true,
     regenerator: true,
     useESModules: envOpts.modules === false,
-    version: '7.7.0', // 1
+    version: '7.8.0', // 1
   };
 
   let presets = [
@@ -56,8 +54,6 @@ module.exports = (context, options) => {
 
   let plugins = [
     '@babel/plugin-transform-flow-strip-types', // 2
-    '@babel/plugin-proposal-optional-chaining',
-    '@babel/plugin-proposal-nullish-coalescing-operator',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-runtime', runtimeOpts],
