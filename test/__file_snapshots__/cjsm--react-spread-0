@@ -4,6 +4,7 @@ var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequ
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
 
+/*#__PURE__*/
 React.createElement("div", (0, _extends2.default)({
   a: true
 }, b), "hello");
