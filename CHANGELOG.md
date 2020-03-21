@@ -4,6 +4,9 @@
 ### Changed
   * Babel `7.9.x` upgrades.
 
+### Added 
+  * Enable the `bugfix` options (ex preset-modules) for the `esmodules` build.
+
 ## 3.6.0 - 2020-01-13
 ### Changed
   * Babel `7.8.x` upgrades.

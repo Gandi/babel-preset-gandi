@@ -2,7 +2,7 @@ import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
 
 function Button(_ref) {
-  var {
+  let {
     type = 'button',
     children
   } = _ref,
