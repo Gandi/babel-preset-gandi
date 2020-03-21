@@ -1,1 +1,1 @@
-var A = () => React.createElement("div", null, "hello");
+var A = () => /*#__PURE__*/React.createElement("div", null, "hello");
