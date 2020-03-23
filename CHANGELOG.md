@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 4.0.0 - 2020-03-23
 ### Changed
   * Babel `7.9.x` upgrades.
   * Bump node version to 12 in targets config.
