@@ -107,7 +107,7 @@ let cases = [
     `,
   ],
   [
-    'React component',
+    'React function component',
     `
       function Button({ type = 'button', children, ...extraProps }) {
         return (
@@ -115,6 +115,29 @@ let cases = [
             {children}
           </button>
         );
+      }
+    `,
+  ],
+  [
+    'React class component',
+    `
+      import * as React from 'react';
+
+      class Button extends React.Component {
+        handleClick = async (evt) => {
+          evt.preventDefault();
+          await fetch('/foo');
+        }
+
+        render() {
+          const { type = 'button', ...extraProps } = this.props;
+
+          return (
+            <button type={type} onClick={this.handleClick} {...extraProps}>
+              {children}
+            </button>
+          );
+        }
       }
     `,
   ],
