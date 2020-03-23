@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Changed
   * Babel `7.9.x` upgrades.
+  * Bump node version to 12 in targets config.
 
 ### Added 
   * Enable the `bugfix` options (ex preset-modules) for the `esmodules` build.

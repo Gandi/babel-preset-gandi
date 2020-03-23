@@ -32,9 +32,9 @@ module.exports = (context, options = {}) => {
     {
       targets: {
         browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
-        node: 10,
+        node: 12,
       },
-      bugfixes: options.targets && options.targets.esmodules === true
+      bugfixes: options.targets && options.targets.esmodules === true,
     },
     options
   );
