@@ -14,13 +14,13 @@ let cases = [
     `,
   ],
   [
-    'react',
+    'jsx',
     `
       let A = () => <div>hello</div>
     `,
   ],
   [
-    'react spread',
+    'jsx spread',
     `
       <div a {...b}>hello</div>
     `,
@@ -103,6 +103,18 @@ let cases = [
       type Props = {}
       class C {
         props: Props
+      }
+    `,
+  ],
+  [
+    'React component',
+    `
+      function Button({ type = 'button', children, ...extraProps }) {
+        return (
+          <button type={type} {...extraProps}>
+            {children}
+          </button>
+        );
       }
     `,
   ],

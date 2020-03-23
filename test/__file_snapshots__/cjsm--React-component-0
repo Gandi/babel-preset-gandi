@@ -1,0 +1,17 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectWithoutProperties"));
+
+function Button(_ref) {
+  var _ref$type = _ref.type,
+      type = _ref$type === void 0 ? 'button' : _ref$type,
+      children = _ref.children,
+      extraProps = (0, _objectWithoutProperties2.default)(_ref, ["type", "children"]);
+  return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
+    type: type
+  }, extraProps), children);
+}

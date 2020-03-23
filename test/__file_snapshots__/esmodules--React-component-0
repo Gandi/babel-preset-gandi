@@ -1,0 +1,14 @@
+import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
+
+function Button(_ref) {
+  var {
+    type = 'button',
+    children
+  } = _ref,
+      extraProps = _objectWithoutProperties(_ref, ["type", "children"]);
+
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: type
+  }, extraProps), children);
+}
