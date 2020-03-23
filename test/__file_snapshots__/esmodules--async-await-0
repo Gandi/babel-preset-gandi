@@ -1,5 +1,3 @@
-import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
-
-_asyncToGenerator(function* () {
-  yield foo();
+(async function () {
+  await foo();
 })();

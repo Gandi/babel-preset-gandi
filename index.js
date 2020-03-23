@@ -27,13 +27,14 @@
  *    This is to avoid the `undefined` properties issue with old Flow props
  *    syntax: `class A { props: Props }`.
  */
-module.exports = (context, options) => {
+module.exports = (context, options = {}) => {
   let envOpts = Object.assign(
     {
       targets: {
         browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
         node: 10,
       },
+      bugfixes: options.targets && options.targets.esmodules === true
     },
     options
   );
