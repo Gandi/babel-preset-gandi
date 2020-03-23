@@ -37,11 +37,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/runtime-corejs2": "^7.9.0",
+    "@babel/runtime-corejs2": "^7.9.2",
     "jest": "^25.1.0",
     "jest-file-snapshot": "^0.3.8"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.8.x"
+    "@babel/runtime-corejs2": "7.9.x"
   }
 }
