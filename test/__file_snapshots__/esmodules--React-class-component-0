@@ -1,0 +1,28 @@
+import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
+import * as React from 'react';
+
+class Button extends React.Component {
+  constructor(...args) {
+    super(...args);
+
+    this.handleClick = async function (evt) {
+      evt.preventDefault();
+      await fetch('/foo');
+    };
+  }
+
+  render() {
+    const _this$props = this.props,
+          {
+      type = 'button'
+    } = _this$props,
+          extraProps = _objectWithoutProperties(_this$props, ["type"]);
+
+    return /*#__PURE__*/React.createElement("button", _extends({
+      type: type,
+      onClick: this.handleClick
+    }, extraProps), children);
+  }
+
+}
