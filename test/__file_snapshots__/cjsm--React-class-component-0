@@ -16,9 +16,9 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs2/he
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createClass"));
 
-var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
-
 var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/inherits"));
+
+var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
 
 var React = _interopRequireWildcard(require("react"));
 

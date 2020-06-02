@@ -4,8 +4,8 @@ import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
 import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime-corejs2/helpers/esm/createClass";
-import _createSuper from "@babel/runtime-corejs2/helpers/esm/createSuper";
 import _inherits from "@babel/runtime-corejs2/helpers/esm/inherits";
+import _createSuper from "@babel/runtime-corejs2/helpers/esm/createSuper";
 import * as React from 'react';
 
 var Button = /*#__PURE__*/function (_React$Component) {
