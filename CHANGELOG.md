@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 4.1.0 - 2020-06-02
 ### Changed
   * Babel `7.10.x` upgrades.
 
