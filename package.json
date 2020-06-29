@@ -43,6 +43,6 @@
     "prettier": "^2.0.5"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.9.x"
+    "@babel/runtime-corejs2": "7.10.x"
   }
 }
