@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 4.1.1 - 2020-06-29
 ### Fixed 
   * Fix `@babel/runtime-corejs2` peerDependency version.
 
