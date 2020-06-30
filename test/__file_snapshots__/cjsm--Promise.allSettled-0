@@ -1,0 +1,11 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
+
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
+
+_promise.default.allSettled([_promise.default.resolve(1), _promise.default.resolve(2)]).then(function (rs) {
+  return rs.forEach(function (r) {
+    return console.log(r.status);
+  });
+});

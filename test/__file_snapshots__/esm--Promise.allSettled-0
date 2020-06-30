@@ -1,0 +1,7 @@
+import _Promise from "@babel/runtime-corejs2/core-js/promise";
+
+_Promise.allSettled([_Promise.resolve(1), _Promise.resolve(2)]).then(function (rs) {
+  return rs.forEach(function (r) {
+    return console.log(r.status);
+  });
+});
