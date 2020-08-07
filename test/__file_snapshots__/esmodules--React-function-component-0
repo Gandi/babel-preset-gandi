@@ -1,5 +1,5 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime-corejs3/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime-corejs3/helpers/esm/objectWithoutProperties";
 
 function Button(_ref) {
   let {

@@ -1,4 +1,4 @@
-import _Object$entries from "@babel/runtime-corejs2/core-js/object/entries";
+import _Object$entries from "@babel/runtime-corejs3/core-js-stable/object/entries";
 
 _Object$entries({
   a: 1
