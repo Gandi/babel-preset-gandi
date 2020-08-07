@@ -1,6 +1,6 @@
 {
   "name": "@gandi/babel-preset-gandi",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "description": "Babel preset for Gandi",
   "keywords": [
     "babel",
@@ -43,6 +43,6 @@
     "prettier": "^2.0.5"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.10.x"
+    "@babel/runtime-corejs2": "7.11.x"
   }
 }

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## 4.2.0 - 2020-08-07
+### Changed
+  * Babel `7.11.x` upgrades.
+
 ## 4.1.1 - 2020-06-29
 ### Fixed 
   * Fix `@babel/runtime-corejs2` peerDependency version.
