@@ -4,7 +4,6 @@
  *
  * [Proposals]
  * https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
- * https://babeljs.io/docs/en/babel-plugin-proposal-decorators
  *
  * [React]
  * https://babeljs.io/docs/en/babel-preset-react
@@ -55,7 +54,6 @@ module.exports = (context, options = {}) => {
 
   let plugins = [
     '@babel/plugin-transform-flow-strip-types', // 2
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
