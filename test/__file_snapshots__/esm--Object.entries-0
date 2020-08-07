@@ -1,0 +1,5 @@
+import _Object$entries from "@babel/runtime-corejs2/core-js/object/entries";
+
+_Object$entries({
+  a: 1
+});

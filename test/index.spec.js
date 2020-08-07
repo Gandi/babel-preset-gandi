@@ -151,6 +151,12 @@ let cases = [
     .then((rs) => rs.forEach((r) => console.log(r.status)));
     `,
   ],
+  [
+    'Object.entries',
+    `
+    Object.entries({ a: 1 });
+    `,
+  ],
 ];
 
 test.each(cases)('cjsm: %s', (name, input) => {
