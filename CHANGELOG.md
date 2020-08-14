@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.0.0 - 2020-08-14
 ### Changed
   * **BREAKING**
     Remove the decorators proposal plugin.
