@@ -44,13 +44,6 @@ let cases = [
     `,
   ],
   [
-    'decorators legacy',
-    `
-      @decorated
-      class A {}
-    `,
-  ],
-  [
     'dynamic imports',
     `
       import('./a')

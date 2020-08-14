@@ -1,5 +1,0 @@
-"use strict";
-
-var _class;
-
-let A = decorated(_class = class A {}) || _class;
