@@ -1,12 +1,12 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 
-var _set = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/set"));
+var _set = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/set"));
 
-var _map = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/map"));
+var _map = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/map"));
 
 new _map.default();
 new _set.default();

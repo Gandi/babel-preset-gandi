@@ -1,10 +1,10 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard");
+var _interopRequireWildcard = require("@babel/runtime-corejs3/helpers/interopRequireWildcard");
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/extends"));
 
 var React = _interopRequireWildcard(require("react"));
 

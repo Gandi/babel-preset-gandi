@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _extends from "@babel/runtime-corejs3/helpers/esm/extends";
 
 /*#__PURE__*/
 React.createElement("div", _extends({
