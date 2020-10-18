@@ -28,18 +28,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-flow": "^7.10.4",
-    "@babel/preset-react": "^7.10.4"
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/preset-react": "^7.12.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/runtime-corejs2": "^7.11.2",
-    "jest": "^26.4.0",
+    "@babel/core": "^7.12.3",
+    "@babel/runtime-corejs2": "^7.12.1",
+    "jest": "^26.5.3",
     "jest-file-snapshot": "^0.3.8",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   },
   "peerDependencies": {
     "@babel/runtime-corejs2": "7.11.x"
