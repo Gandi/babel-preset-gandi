@@ -48,7 +48,7 @@ module.exports = (context, options = {}) => {
 
   let presets = [
     ['@babel/preset-env', envOpts],
-    '@babel/preset-react',
+    ['@babel/preset-react', { runtime: 'automatic' }],
     '@babel/preset-flow',
   ];
 

@@ -1,10 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectSpread2"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectWithoutProperties"));
 
@@ -20,7 +18,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/
 
 var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
 
-var React = _interopRequireWildcard(require("react"));
+var _jsxRuntime = require("react/jsx-runtime.js");
 
 var Button = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Button, _React$Component);
@@ -70,11 +68,14 @@ var Button = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           _this$props$type = _this$props.type,
           type = _this$props$type === void 0 ? 'button' : _this$props$type,
-          extraProps = (0, _objectWithoutProperties2.default)(_this$props, ["type"]);
-      return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
+          chidlren = _this$props.chidlren,
+          extraProps = (0, _objectWithoutProperties2.default)(_this$props, ["type", "chidlren"]);
+      return /*#__PURE__*/(0, _jsxRuntime.jsx)("button", (0, _objectSpread2.default)((0, _objectSpread2.default)({
         type: type,
         onClick: this.handleClick
-      }, extraProps), children);
+      }, extraProps), {}, {
+        children: children
+      }));
     }
   }]);
   return Button;
