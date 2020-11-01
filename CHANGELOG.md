@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed 
+  * Bump node version to 14 in targets config.
 
 ## 5.1.0 - 2020-10-18
 ### Changed
