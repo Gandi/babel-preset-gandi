@@ -1,6 +1,9 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread2";
+import { jsx as _jsx } from "react/jsx-runtime.js";
 
 /*#__PURE__*/
-React.createElement("div", _extends({
+_jsx("div", _objectSpread(_objectSpread({
   a: true
-}, b), "hello");
+}, b), {}, {
+  children: "hello"
+}));

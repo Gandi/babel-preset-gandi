@@ -2,16 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectSpread2"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectWithoutProperties"));
+
+var _jsxRuntime = require("react/jsx-runtime.js");
 
 function Button(_ref) {
   var _ref$type = _ref.type,
       type = _ref$type === void 0 ? 'button' : _ref$type,
       children = _ref.children,
       extraProps = (0, _objectWithoutProperties2.default)(_ref, ["type", "children"]);
-  return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)("button", (0, _objectSpread2.default)((0, _objectSpread2.default)({
     type: type
-  }, extraProps), children);
+  }, extraProps), {}, {
+    children: children
+  }));
 }

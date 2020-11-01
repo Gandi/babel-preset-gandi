@@ -1,5 +1,9 @@
 "use strict";
 
+var _jsxRuntime = require("react/jsx-runtime.js");
+
 var A = function A() {
-  return /*#__PURE__*/React.createElement("div", null, "hello");
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+    children: "hello"
+  });
 };

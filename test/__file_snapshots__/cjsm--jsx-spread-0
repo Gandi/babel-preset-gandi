@@ -2,9 +2,13 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectSpread2"));
+
+var _jsxRuntime = require("react/jsx-runtime.js");
 
 /*#__PURE__*/
-React.createElement("div", (0, _extends2.default)({
+(0, _jsxRuntime.jsx)("div", (0, _objectSpread2.default)((0, _objectSpread2.default)({
   a: true
-}, b), "hello");
+}, b), {}, {
+  children: "hello"
+}));

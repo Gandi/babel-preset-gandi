@@ -114,8 +114,6 @@ let cases = [
   [
     'React class component',
     `
-      import * as React from 'react';
-
       class Button extends React.Component {
         handleClick = async (evt) => {
           evt.preventDefault();
@@ -123,7 +121,7 @@ let cases = [
         }
 
         render() {
-          const { type = 'button', ...extraProps } = this.props;
+          const { type = 'button', chidlren, ...extraProps } = this.props;
 
           return (
             <button type={type} onClick={this.handleClick} {...extraProps}>

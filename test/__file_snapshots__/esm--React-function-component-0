@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
+import { jsx as _jsx } from "react/jsx-runtime.js";
 
 function Button(_ref) {
   var _ref$type = _ref.type,
@@ -7,7 +8,9 @@ function Button(_ref) {
       children = _ref.children,
       extraProps = _objectWithoutProperties(_ref, ["type", "children"]);
 
-  return /*#__PURE__*/React.createElement("button", _extends({
+  return /*#__PURE__*/_jsx("button", _objectSpread(_objectSpread({
     type: type
-  }, extraProps), children);
+  }, extraProps), {}, {
+    children: children
+  }));
 }

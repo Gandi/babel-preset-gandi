@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Switch to JSX `automatic` runtime.
 
 ## 5.1.0 - 2020-10-18
 ### Changed

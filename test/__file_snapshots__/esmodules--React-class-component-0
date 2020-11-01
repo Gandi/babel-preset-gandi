@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
-import * as React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime.js";
 
 class Button extends React.Component {
   constructor(...args) {
@@ -15,14 +15,17 @@ class Button extends React.Component {
   render() {
     const _this$props = this.props,
           {
-      type = 'button'
+      type = 'button',
+      chidlren
     } = _this$props,
-          extraProps = _objectWithoutProperties(_this$props, ["type"]);
+          extraProps = _objectWithoutProperties(_this$props, ["type", "chidlren"]);
 
-    return /*#__PURE__*/React.createElement("button", _extends({
+    return /*#__PURE__*/_jsx("button", _objectSpread(_objectSpread({
       type: type,
       onClick: this.handleClick
-    }, extraProps), children);
+    }, extraProps), {}, {
+      children: children
+    }));
   }
 
 }

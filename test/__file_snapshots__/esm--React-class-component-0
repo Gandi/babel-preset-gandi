@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
+import _objectSpread from "@babel/runtime-corejs2/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
 import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
@@ -6,7 +6,7 @@ import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime-corejs2/helpers/esm/createClass";
 import _inherits from "@babel/runtime-corejs2/helpers/esm/inherits";
 import _createSuper from "@babel/runtime-corejs2/helpers/esm/createSuper";
-import * as React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime.js";
 
 var Button = /*#__PURE__*/function (_React$Component) {
   _inherits(Button, _React$Component);
@@ -56,12 +56,15 @@ var Button = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           _this$props$type = _this$props.type,
           type = _this$props$type === void 0 ? 'button' : _this$props$type,
-          extraProps = _objectWithoutProperties(_this$props, ["type"]);
+          chidlren = _this$props.chidlren,
+          extraProps = _objectWithoutProperties(_this$props, ["type", "chidlren"]);
 
-      return /*#__PURE__*/React.createElement("button", _extends({
+      return /*#__PURE__*/_jsx("button", _objectSpread(_objectSpread({
         type: type,
         onClick: this.handleClick
-      }, extraProps), children);
+      }, extraProps), {}, {
+        children: children
+      }));
     }
   }]);
 
