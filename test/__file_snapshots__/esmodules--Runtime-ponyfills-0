@@ -1,6 +1,6 @@
-import _Promise from "@babel/runtime-corejs2/core-js/promise";
-import _Set from "@babel/runtime-corejs2/core-js/set";
 import _Map from "@babel/runtime-corejs2/core-js/map";
+import _Set from "@babel/runtime-corejs2/core-js/set";
+import _Promise from "@babel/runtime-corejs2/core-js/promise";
 new _Map();
 new _Set();
 new _Promise();

@@ -1,11 +1,11 @@
-import _extends from "@babel/runtime-corejs2/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime-corejs2/helpers/extends";
+import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/objectWithoutProperties";
+import _asyncToGenerator from "@babel/runtime-corejs2/helpers/asyncToGenerator";
+import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
+import _createClass from "@babel/runtime-corejs2/helpers/createClass";
+import _inherits from "@babel/runtime-corejs2/helpers/inherits";
+import _createSuper from "@babel/runtime-corejs2/helpers/createSuper";
 import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
-import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
-import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime-corejs2/helpers/esm/createClass";
-import _inherits from "@babel/runtime-corejs2/helpers/esm/inherits";
-import _createSuper from "@babel/runtime-corejs2/helpers/esm/createSuper";
 import * as React from 'react';
 
 var Button = /*#__PURE__*/function (_React$Component) {
