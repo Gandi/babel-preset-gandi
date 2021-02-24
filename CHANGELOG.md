@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Changed
   * Babel `7.13.x` upgrades.
+  * Remove default node version from targets.
 
 ## 5.1.0 - 2020-10-18
 ### Changed
