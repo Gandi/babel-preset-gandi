@@ -1,5 +1,5 @@
+import _asyncToGenerator from "@babel/runtime-corejs2/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
-import _asyncToGenerator from "@babel/runtime-corejs2/helpers/esm/asyncToGenerator";
 
 _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
   return _regeneratorRuntime.wrap(function _callee$(_context) {

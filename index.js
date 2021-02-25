@@ -31,7 +31,6 @@ module.exports = (context, options = {}) => {
     {
       targets: {
         browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
-        node: 12,
       },
       bugfixes: options.targets && options.targets.esmodules === true,
     },
@@ -42,8 +41,7 @@ module.exports = (context, options = {}) => {
     corejs: 2,
     helpers: true,
     regenerator: true,
-    useESModules: envOpts.modules === false,
-    version: '7.12.0', // 1
+    version: '7.13.0', // 1
   };
 
   let presets = [
