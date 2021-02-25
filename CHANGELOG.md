@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.2.0 - 2021-02-25
 ### Changed
   * Babel `7.13.x` upgrades.
   * Remove default node version from targets.
