@@ -6,16 +6,17 @@ var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequ
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
 
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/defineProperty"));
+
 var React = _interopRequireWildcard(require("react"));
 
 class Button extends React.Component {
   constructor(...args) {
     super(...args);
-
-    this.handleClick = async evt => {
+    (0, _defineProperty2.default)(this, "handleClick", async evt => {
       evt.preventDefault();
       await fetch('/foo');
-    };
+    });
   }
 
   render() {

@@ -1,7 +1,8 @@
 import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
+import _defineProperty from "@babel/runtime-corejs2/helpers/defineProperty";
 
 var A = function A() {
   _classCallCheck(this, A);
 };
 
-A.a = 'hello';
+_defineProperty(A, "a", 'hello');

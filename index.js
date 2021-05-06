@@ -19,12 +19,10 @@
  * 1. Ensure all helpers are imported instead of inlined.
  *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
  *
- * 2. Plugins are run in the order defined below,
+ * 2. Presets are run in the reverse order they are defined...
+ *
+ * 3. Plugins are run in the order they are defined,
  *    but they are run *before* presets.
- *    So we need to make sure the Flow annotations are removed before
- *    the class properties plugin.
- *    This is to avoid the `undefined` properties issue with old Flow props
- *    syntax: `class A { props: Props }`.
  */
 module.exports = (context, options = {}) => {
   let envOpts = Object.assign(
@@ -44,18 +42,15 @@ module.exports = (context, options = {}) => {
     version: '7.14.0', // 1
   };
 
+  // 2
   let presets = [
     ['@babel/preset-env', envOpts],
     '@babel/preset-react',
     '@babel/preset-flow',
   ];
 
-  let plugins = [
-    '@babel/plugin-transform-flow-strip-types', // 2
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-private-methods', { loose: true }],
-    ['@babel/plugin-transform-runtime', runtimeOpts],
-  ];
+  // 3
+  let plugins = [['@babel/plugin-transform-runtime', runtimeOpts]];
 
   return {
     presets,

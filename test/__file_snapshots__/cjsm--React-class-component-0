@@ -16,9 +16,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs2/he
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/assertThisInitialized"));
+
 var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/inherits"));
 
 var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/defineProperty"));
 
 var React = _interopRequireWildcard(require("react"));
 
@@ -37,8 +41,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
     }
 
     _this = _super.call.apply(_super, [this].concat(args));
-
-    _this.handleClick = /*#__PURE__*/function () {
+    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "handleClick", /*#__PURE__*/function () {
       var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(evt) {
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
@@ -59,8 +62,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
       return function (_x) {
         return _ref.apply(this, arguments);
       };
-    }();
-
+    }());
     return _this;
   }
 
