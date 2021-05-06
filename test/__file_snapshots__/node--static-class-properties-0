@@ -1,5 +1,9 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/defineProperty"));
+
 class A {}
 
-A.a = 'hello';
+(0, _defineProperty2.default)(A, "a", 'hello');

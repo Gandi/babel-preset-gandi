@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed 
+  * Remove loose mode from class properties/methods plugins.
 
 ## 5.3.0 - 2021-05-06
 ### Changed
