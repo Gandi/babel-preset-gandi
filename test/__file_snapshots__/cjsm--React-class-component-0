@@ -1,14 +1,14 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard").default;
-
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime-corejs2/regenerator"));
+var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard").default;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectWithoutProperties"));
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime-corejs2/regenerator"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/asyncToGenerator"));
 
@@ -21,6 +21,8 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/
 var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
 
 var React = _interopRequireWildcard(require("react"));
+
+var _excluded = ["type"];
 
 var Button = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Button, _React$Component);
@@ -70,7 +72,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           _this$props$type = _this$props.type,
           type = _this$props$type === void 0 ? 'button' : _this$props$type,
-          extraProps = (0, _objectWithoutProperties2.default)(_this$props, ["type"]);
+          extraProps = (0, _objectWithoutProperties2.default)(_this$props, _excluded);
       return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
         type: type,
         onClick: this.handleClick

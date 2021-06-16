@@ -5,6 +5,7 @@ import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
 import _createClass from "@babel/runtime-corejs2/helpers/createClass";
 import _inherits from "@babel/runtime-corejs2/helpers/inherits";
 import _createSuper from "@babel/runtime-corejs2/helpers/createSuper";
+var _excluded = ["type"];
 import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
 import * as React from 'react';
 
@@ -56,7 +57,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           _this$props$type = _this$props.type,
           type = _this$props$type === void 0 ? 'button' : _this$props$type,
-          extraProps = _objectWithoutProperties(_this$props, ["type"]);
+          extraProps = _objectWithoutProperties(_this$props, _excluded);
 
       return /*#__PURE__*/React.createElement("button", _extends({
         type: type,
