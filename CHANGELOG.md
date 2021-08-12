@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Babel runtime-corejs2 `7.15.x` upgrade.
 
 ## 5.4.0 - 2021-08-05
 ### Changed

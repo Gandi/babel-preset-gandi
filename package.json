@@ -38,12 +38,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
-    "@babel/runtime-corejs2": "^7.14.8",
+    "@babel/runtime-corejs2": "^7.15.3",
     "jest": "^27.0.6",
     "jest-file-snapshot": "^0.5.0",
     "prettier": "^2.3.2"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.14.x"
+    "@babel/runtime-corejs2": "7.15.x"
   }
 }
