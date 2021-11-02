@@ -28,22 +28,22 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-proposal-private-methods": "^7.14.5",
-    "@babel/plugin-proposal-private-property-in-object": "^7.15.4",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-flow": "^7.14.5",
-    "@babel/preset-react": "^7.14.5"
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-private-methods": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-flow": "^7.16.0",
+    "@babel/preset-react": "^7.16.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/runtime-corejs2": "^7.15.4",
+    "@babel/core": "^7.16.0",
+    "@babel/runtime-corejs2": "^7.16.0",
     "jest": "^27.3.1",
     "jest-file-snapshot": "^0.5.0",
     "prettier": "^2.4.1"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.15.x"
+    "@babel/runtime-corejs2": "7.16.x"
   }
 }
