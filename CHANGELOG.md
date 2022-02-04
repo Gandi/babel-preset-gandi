@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.7.0 - 2022-02-04
 ### Changed
   * Babel `7.17.x` upgrades.
 
