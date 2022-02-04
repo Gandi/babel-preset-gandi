@@ -1,5 +1,6 @@
+import _createClass from "@babel/runtime-corejs2/helpers/createClass";
 import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
 
-var C = function C() {
+var C = /*#__PURE__*/_createClass(function C() {
   _classCallCheck(this, C);
-};
+});
