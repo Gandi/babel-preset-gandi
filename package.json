@@ -28,22 +28,22 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-private-methods": "^7.16.11",
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
-    "@babel/plugin-transform-runtime": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-flow": "^7.16.7",
-    "@babel/preset-react": "^7.16.7"
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-private-methods": "^7.17.12",
+    "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-flow": "^7.17.12",
+    "@babel/preset-react": "^7.17.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.0",
-    "@babel/runtime-corejs2": "^7.17.0",
-    "jest": "^27.4.7",
+    "@babel/core": "^7.18.0",
+    "@babel/runtime-corejs2": "^7.18.0",
+    "jest": "^28.1.0",
     "jest-file-snapshot": "^0.5.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.2"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs2": "7.17.x"
+    "@babel/runtime-corejs2": "7.18.x"
   }
 }
