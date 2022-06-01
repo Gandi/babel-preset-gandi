@@ -1,8 +1,10 @@
 # Change log
 
 ## [Unreleased]
+### Fixed
+  * Missing bump of `version` in runtime options. 
 
-## 5.7.0 - 2022-05-23
+## 5.8.0 - 2022-05-23
 ### Changed
   * Babel `7.18.x` upgrades.
 
@@ -48,7 +50,7 @@
   * Babel `7.11.x` upgrades.
 
 ## 4.1.1 - 2020-06-29
-### Fixed 
+### Fixed
   * Fix `@babel/runtime-corejs2` peerDependency version.
 
 ## 4.1.0 - 2020-06-02
@@ -60,7 +62,7 @@
   * Babel `7.9.x` upgrades.
   * Bump node version to 12 in targets config.
 
-### Added 
+### Added
   * Enable the `bugfix` options (ex preset-modules) for the `esmodules` build.
 
 ## 3.6.0 - 2020-01-13
@@ -105,7 +107,7 @@
   * Ensure new Babel helpers won't get inlined by specifying the runtime version we use.
   * Ensure legacy Flow annotations for React props won't get transformed to void
     class properties.
-    See https://github.com/babel/babel/issues/8417  
+    See https://github.com/babel/babel/issues/8417
     Wait for https://github.com/babel/babel/pull/9141
 
 ## 3.0.0 - 2018-11-26
@@ -128,9 +130,9 @@
 
 ## 2.2.0 - 2018-07-05
 ### Changed
-  - Slightly tweak Browserslist config to exclude "dead" browsers:  
+  - Slightly tweak Browserslist config to exclude "dead" browsers:
     "browsers from last 2 version query, but with less than 0.5% in global usage statistics
-    and without official support or updates for 24 months".                                 
+    and without official support or updates for 24 months".
 
 ## 2.1.0 - 2018-06-01
 ### Added
