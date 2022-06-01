@@ -1,8 +1,10 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.8.1 - 2022-06-01
 ### Fixed
-  * Missing bump of `version` in runtime options. 
+  * Missing bump of `version` in runtime options.
 
 ## 5.8.0 - 2022-05-23
 ### Changed
