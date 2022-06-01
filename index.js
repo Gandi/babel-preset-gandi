@@ -29,13 +29,16 @@
 module.exports = (context, options = {}) => {
   let envOpts = Object.assign(
     {
-      targets: {
-        browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
-      },
-      bugfixes: options.targets && options.targets.esmodules === true,
+      bugfixes: options.bugfixes,
+      useBuiltIns: 'usage',
+      corejs: '2',
     },
     options
   );
+
+  let reactOpts = {
+    useSpread: true,
+  };
 
   let runtimeOpts = {
     corejs: 2,
@@ -46,7 +49,7 @@ module.exports = (context, options = {}) => {
 
   let presets = [
     ['@babel/preset-env', envOpts],
-    '@babel/preset-react',
+    ['@babel/preset-react', reactOpts],
     '@babel/preset-flow',
   ];
 
