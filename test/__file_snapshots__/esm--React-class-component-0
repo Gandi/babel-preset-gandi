@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime-corejs2/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/objectWithoutProperties";
+import _regeneratorRuntime from "@babel/runtime-corejs2/helpers/regeneratorRuntime";
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/asyncToGenerator";
 import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
 import _createClass from "@babel/runtime-corejs2/helpers/createClass";
 import _inherits from "@babel/runtime-corejs2/helpers/inherits";
 import _createSuper from "@babel/runtime-corejs2/helpers/createSuper";
 var _excluded = ["type"];
-import _regeneratorRuntime from "@babel/runtime-corejs2/regenerator";
 import * as React from 'react';
 
 var Button = /*#__PURE__*/function (_React$Component) {
@@ -26,8 +26,8 @@ var Button = /*#__PURE__*/function (_React$Component) {
     _this = _super.call.apply(_super, [this].concat(args));
 
     _this.handleClick = /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(evt) {
-        return _regeneratorRuntime.wrap(function _callee$(_context) {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(evt) {
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
