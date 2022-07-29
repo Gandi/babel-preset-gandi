@@ -1,6 +1,9 @@
 # Change log
 
 ## [Unreleased]
+### Fixed 
+  * Temporarily add back IE11 to our targets.
+    In recent Browserslist versions the not dead query removes IE11 from our targets. This breaks our ES5 check on the legacy bundle.
 
 ## 5.8.1 - 2022-06-01
 ### Fixed
