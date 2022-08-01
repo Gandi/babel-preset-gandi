@@ -25,12 +25,20 @@
  *    the class properties plugin.
  *    This is to avoid the `undefined` properties issue with old Flow props
  *    syntax: `class A { props: Props }`.
+ *
+ * 3. Temporary, see https://github.com/Gandi/babel-preset-gandi/pull/42
  */
 module.exports = (context, options = {}) => {
   let envOpts = Object.assign(
     {
       targets: {
-        browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'not dead'],
+        browsers: [
+          'last 2 versions',
+          '> 1%',
+          'not dead',
+          'Firefox ESR',
+          'IE 11', // 3
+        ],
       },
       bugfixes: options.targets && options.targets.esmodules === true,
     },
