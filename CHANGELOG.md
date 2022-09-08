@@ -1,10 +1,12 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.9.0 - 2022-09-08
 ### Changed
   * Babel `7.19.x` upgrades.
 
-## 5.8.2 - 2022-09-01
+## 5.8.2 - 2022-08-01
 ### Fixed 
   * Temporarily add back IE11 to our targets.
     In recent Browserslist versions the not dead query removes IE11 from our targets. 

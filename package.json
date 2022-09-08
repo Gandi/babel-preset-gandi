@@ -1,6 +1,6 @@
 {
   "name": "@gandi/babel-preset-gandi",
-  "version": "5.8.2",
+  "version": "5.9.0",
   "description": "Babel preset for Gandi",
   "keywords": [
     "babel",
