@@ -1,23 +1,17 @@
 "use strict";
 
 var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard").default;
-
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
-
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
-
 var React = _interopRequireWildcard(require("react"));
-
 class Button extends React.Component {
   constructor(...args) {
     super(...args);
-
     this.handleClick = async evt => {
       evt.preventDefault();
       await fetch('/foo');
     };
   }
-
   render() {
     const {
       type = 'button',
@@ -28,5 +22,4 @@ class Button extends React.Component {
       onClick: this.handleClick
     }, extraProps), children);
   }
-
 }

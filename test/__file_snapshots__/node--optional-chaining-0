@@ -1,7 +1,6 @@
 "use strict";
 
 var _obj$foo, _obj$foo$bar, _obj$qux;
-
 let obj = {
   foo: {
     bar: {

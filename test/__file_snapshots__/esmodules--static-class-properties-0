@@ -1,3 +1,2 @@
 class A {}
-
 A.a = 'hello';

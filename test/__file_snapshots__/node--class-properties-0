@@ -4,5 +4,4 @@ class A {
   constructor() {
     this.a = () => 'hello';
   }
-
 }
