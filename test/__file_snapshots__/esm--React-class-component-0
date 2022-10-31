@@ -8,23 +8,16 @@ import _inherits from "@babel/runtime-corejs2/helpers/inherits";
 import _createSuper from "@babel/runtime-corejs2/helpers/createSuper";
 var _excluded = ["type"];
 import * as React from 'react';
-
 var Button = /*#__PURE__*/function (_React$Component) {
   _inherits(Button, _React$Component);
-
   var _super = _createSuper(Button);
-
   function Button() {
     var _this;
-
     _classCallCheck(this, Button);
-
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-
     _this = _super.call.apply(_super, [this].concat(args));
-
     _this.handleClick = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(evt) {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
@@ -34,7 +27,6 @@ var Button = /*#__PURE__*/function (_React$Component) {
                 evt.preventDefault();
                 _context.next = 3;
                 return fetch('/foo');
-
               case 3:
               case "end":
                 return _context.stop();
@@ -42,29 +34,24 @@ var Button = /*#__PURE__*/function (_React$Component) {
           }
         }, _callee);
       }));
-
       return function (_x) {
         return _ref.apply(this, arguments);
       };
     }();
-
     return _this;
   }
-
   _createClass(Button, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          _this$props$type = _this$props.type,
-          type = _this$props$type === void 0 ? 'button' : _this$props$type,
-          extraProps = _objectWithoutProperties(_this$props, _excluded);
-
+        _this$props$type = _this$props.type,
+        type = _this$props$type === void 0 ? 'button' : _this$props$type,
+        extraProps = _objectWithoutProperties(_this$props, _excluded);
       return /*#__PURE__*/React.createElement("button", _extends({
         type: type,
         onClick: this.handleClick
       }, extraProps), children);
     }
   }]);
-
   return Button;
 }(React.Component);

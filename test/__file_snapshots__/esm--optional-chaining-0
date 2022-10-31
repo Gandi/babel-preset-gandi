@@ -1,5 +1,4 @@
 var _obj$foo, _obj$foo$bar, _obj$qux;
-
 var obj = {
   foo: {
     bar: {

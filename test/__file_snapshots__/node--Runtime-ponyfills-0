@@ -1,13 +1,9 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
-
 var _map = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/map"));
-
 var _set = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/set"));
-
 var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
-
 new _map.default();
 new _set.default();
 new _promise.default();
