@@ -150,6 +150,12 @@ let cases = [
     Object.entries({ a: 1 });
     `,
   ],
+  [
+    'Array.flatMap',
+    `
+    [1, 2].flatMap(x => [x * 2])
+    `,
+  ],
 ];
 
 test.each(cases)('cjsm: %s', (name, input) => {

@@ -1,0 +1,3 @@
+[1, 2].flatMap(function (x) {
+  return [x * 2];
+});
