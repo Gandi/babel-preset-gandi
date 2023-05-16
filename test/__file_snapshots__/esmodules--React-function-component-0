@@ -1,10 +1,10 @@
-import _extends from "@babel/runtime-corejs3/helpers/extends";
 function Button({
   type = 'button',
   children,
   ...extraProps
 }) {
-  return /*#__PURE__*/React.createElement("button", _extends({
-    type: type
-  }, extraProps), children);
+  return /*#__PURE__*/React.createElement("button", {
+    type: type,
+    ...extraProps
+  }, children);
 }
