@@ -45,7 +45,7 @@ module.exports = (context, options = {}) => {
   );
 
   let runtimeOpts = {
-    corejs: 2,
+    corejs: 3,
     helpers: true,
     regenerator: true,
     version: '7.22.0', // 1

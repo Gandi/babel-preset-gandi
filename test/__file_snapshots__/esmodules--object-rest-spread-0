@@ -1,2 +1,2 @@
-import _objectSpread from "@babel/runtime-corejs2/helpers/objectSpread2";
+import _objectSpread from "@babel/runtime-corejs3/helpers/objectSpread2";
 let b = _objectSpread({}, a);

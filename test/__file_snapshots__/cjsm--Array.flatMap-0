@@ -1,5 +1,8 @@
 "use strict";
 
-[1, 2].flatMap(function (x) {
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
+var _flatMap = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/flat-map"));
+var _context;
+(0, _flatMap.default)(_context = [1, 2]).call(_context, function (x) {
   return [x * 2];
 });

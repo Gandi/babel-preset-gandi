@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Changed
   * Remove loose mode usage of class properties/methods plugins.
+  * Core-js 3 upgrade.
 
 ## 5.13.1 - 2023-07-18
 ### Changed
