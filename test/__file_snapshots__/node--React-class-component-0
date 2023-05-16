@@ -5,13 +5,10 @@ var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequ
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
 var React = _interopRequireWildcard(require("react"));
 class Button extends React.Component {
-  constructor(...args) {
-    super(...args);
-    this.handleClick = async evt => {
-      evt.preventDefault();
-      await fetch('/foo');
-    };
-  }
+  handleClick = async evt => {
+    evt.preventDefault();
+    await fetch('/foo');
+  };
   render() {
     const {
       type = 'button',

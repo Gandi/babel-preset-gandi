@@ -1,4 +1,5 @@
 "use strict";
 
-class A {}
-A.a = 'hello';
+class A {
+  static a = 'hello';
+}

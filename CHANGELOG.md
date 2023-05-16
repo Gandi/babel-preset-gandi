@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+### Changed
+  * Remove loose mode usage of class properties/methods plugins.
 
 ## 5.15.0 - 2024-03-06
 ### Changed
