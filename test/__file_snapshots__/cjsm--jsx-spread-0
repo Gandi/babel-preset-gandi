@@ -1,7 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/extends"));
-/*#__PURE__*/React.createElement("div", (0, _extends2.default)({
-  a: true
-}, b), "hello");
+/*#__PURE__*/React.createElement("div", {
+  a: true,
+  ...b
+}, "hello");

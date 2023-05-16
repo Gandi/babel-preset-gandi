@@ -1,13 +1,12 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/extends"));
 function Button({
   type = 'button',
   children,
   ...extraProps
 }) {
-  return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
-    type: type
-  }, extraProps), children);
+  return /*#__PURE__*/React.createElement("button", {
+    type: type,
+    ...extraProps
+  }, children);
 }
