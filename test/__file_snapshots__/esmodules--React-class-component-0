@@ -1,4 +1,3 @@
-import _extends from "@babel/runtime-corejs3/helpers/extends";
 import * as React from 'react';
 class Button extends React.Component {
   handleClick = async evt => {
@@ -10,9 +9,10 @@ class Button extends React.Component {
       type = 'button',
       ...extraProps
     } = this.props;
-    return /*#__PURE__*/React.createElement("button", _extends({
+    return /*#__PURE__*/React.createElement("button", {
       type: type,
-      onClick: this.handleClick
-    }, extraProps), children);
+      onClick: this.handleClick,
+      ...extraProps
+    }, children);
   }
 }

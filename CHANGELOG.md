@@ -9,6 +9,7 @@
     * Drop IE11 support and use the `defaults` Browserslist query.
     * Don't setup the Browserslist query inside the preset. 
     * Use `useBuiltIns: 'usage'` for polyfills handling.
+    * Use React preset `useSpread` options.
 
 ## 5.13.1 - 2023-07-18
 ### Changed
