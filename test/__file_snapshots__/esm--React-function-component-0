@@ -1,11 +1,9 @@
 import _extends from "@babel/runtime-corejs3/helpers/extends";
-import _objectWithoutProperties from "@babel/runtime-corejs3/helpers/objectWithoutProperties";
-var _excluded = ["type", "children"];
-function Button(_ref) {
-  var _ref$type = _ref.type,
-    type = _ref$type === void 0 ? 'button' : _ref$type,
-    children = _ref.children,
-    extraProps = _objectWithoutProperties(_ref, _excluded);
+function Button({
+  type = 'button',
+  children,
+  ...extraProps
+}) {
   return /*#__PURE__*/React.createElement("button", _extends({
     type: type
   }, extraProps), children);

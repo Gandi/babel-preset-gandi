@@ -1,7 +1,1 @@
-import _Promise from "@babel/runtime-corejs3/core-js-stable/promise";
-import _forEachInstanceProperty from "@babel/runtime-corejs3/core-js-stable/instance/for-each";
-_Promise.allSettled([_Promise.resolve(1), _Promise.resolve(2)]).then(function (rs) {
-  return _forEachInstanceProperty(rs).call(rs, function (r) {
-    return console.log(r.status);
-  });
-});
+Promise.allSettled([Promise.resolve(1), Promise.resolve(2)]).then(rs => rs.forEach(r => console.log(r.status)));
