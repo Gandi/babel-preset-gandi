@@ -1,63 +1,22 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
 var _interopRequireWildcard = require("@babel/runtime-corejs3/helpers/interopRequireWildcard").default;
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/extends"));
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/objectWithoutProperties"));
-var _concat = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/concat"));
-var _regeneratorRuntime2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/regeneratorRuntime"));
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/asyncToGenerator"));
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/classCallCheck"));
-var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createClass"));
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/assertThisInitialized"));
-var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/inherits"));
-var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createSuper"));
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/defineProperty"));
 var React = _interopRequireWildcard(require("react"));
-var _excluded = ["type"];
-var Button = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(Button, _React$Component);
-  var _super = (0, _createSuper2.default)(Button);
-  function Button() {
-    var _context;
-    var _this;
-    (0, _classCallCheck2.default)(this, Button);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, (0, _concat.default)(_context = [this]).call(_context, args));
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "handleClick", /*#__PURE__*/function () {
-      var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/(0, _regeneratorRuntime2.default)().mark(function _callee(evt) {
-        return (0, _regeneratorRuntime2.default)().wrap(function _callee$(_context2) {
-          while (1) switch (_context2.prev = _context2.next) {
-            case 0:
-              evt.preventDefault();
-              _context2.next = 3;
-              return fetch('/foo');
-            case 3:
-            case "end":
-              return _context2.stop();
-          }
-        }, _callee);
-      }));
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
-    return _this;
+class Button extends React.Component {
+  handleClick = async evt => {
+    evt.preventDefault();
+    await fetch('/foo');
+  };
+  render() {
+    const {
+      type = 'button',
+      ...extraProps
+    } = this.props;
+    return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
+      type: type,
+      onClick: this.handleClick
+    }, extraProps), children);
   }
-  (0, _createClass2.default)(Button, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-        _this$props$type = _this$props.type,
-        type = _this$props$type === void 0 ? 'button' : _this$props$type,
-        extraProps = (0, _objectWithoutProperties2.default)(_this$props, _excluded);
-      return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
-        type: type,
-        onClick: this.handleClick
-      }, extraProps), children);
-    }
-  }]);
-  return Button;
-}(React.Component);
+}

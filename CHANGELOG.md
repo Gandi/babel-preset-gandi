@@ -4,6 +4,11 @@
 ### Changed
   * Remove loose mode usage of class properties/methods plugins.
   * Core-js 3 upgrade.
+  * Change our targets and polyfill strategy.
+    * We want to leverage targets "intersection". 
+    * Drop IE11 support and use the `defaults` Browserslist query.
+    * Don't setup the Browserslist query inside the preset. 
+    * Use `useBuiltIns: 'usage'` for polyfills handling.
 
 ## 5.13.1 - 2023-07-18
 ### Changed

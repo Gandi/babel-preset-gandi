@@ -160,6 +160,7 @@ let cases = [
 
 test.each(cases)('cjsm: %s', (name, input) => {
   let { code } = transform(input, {
+    targets: { browsers: 'defaults' },
     presets: [preset],
   });
 
@@ -168,6 +169,7 @@ test.each(cases)('cjsm: %s', (name, input) => {
 
 test.each(cases)('esm: %s', (name, input) => {
   let { code } = transform(input, {
+    targets: { browsers: 'defaults' },
     presets: [[preset, { modules: false }]],
   });
 
@@ -176,7 +178,8 @@ test.each(cases)('esm: %s', (name, input) => {
 
 test.each(cases)('esmodules: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { modules: false, targets: { esmodules: true } }]],
+    targets: { browsers: 'defaults', esmodules: true },
+    presets: [[preset, { modules: false }]],
   });
 
   expect(code).toMatchFile();
@@ -184,7 +187,8 @@ test.each(cases)('esmodules: %s', (name, input) => {
 
 test.each(cases)('node: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { targets: { node: 18 } }]],
+    targets: { node: 18 },
+    presets: [preset],
   });
 
   expect(code).toMatchFile();

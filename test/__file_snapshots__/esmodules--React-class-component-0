@@ -1,22 +1,15 @@
 import _extends from "@babel/runtime-corejs3/helpers/extends";
-import _objectWithoutProperties from "@babel/runtime-corejs3/helpers/objectWithoutProperties";
-import _defineProperty from "@babel/runtime-corejs3/helpers/defineProperty";
-const _excluded = ["type"];
 import * as React from 'react';
 class Button extends React.Component {
-  constructor(...args) {
-    super(...args);
-    _defineProperty(this, "handleClick", async function (evt) {
-      evt.preventDefault();
-      await fetch('/foo');
-    });
-  }
+  handleClick = async evt => {
+    evt.preventDefault();
+    await fetch('/foo');
+  };
   render() {
-    const _this$props = this.props,
-      {
-        type = 'button'
-      } = _this$props,
-      extraProps = _objectWithoutProperties(_this$props, _excluded);
+    const {
+      type = 'button',
+      ...extraProps
+    } = this.props;
     return /*#__PURE__*/React.createElement("button", _extends({
       type: type,
       onClick: this.handleClick

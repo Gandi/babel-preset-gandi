@@ -1,6 +1,3 @@
-import _defineProperty from "@babel/runtime-corejs3/helpers/defineProperty";
 class A {
-  constructor() {
-    _defineProperty(this, "a", () => 'hello');
-  }
+  a = () => 'hello';
 }

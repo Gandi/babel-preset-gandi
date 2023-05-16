@@ -1,3 +1,1 @@
-var _context;
-import _flatMapInstanceProperty from "@babel/runtime-corejs3/core-js-stable/instance/flat-map";
-_flatMapInstanceProperty(_context = [1, 2]).call(_context, x => [x * 2]);
+[1, 2].flatMap(x => [x * 2]);

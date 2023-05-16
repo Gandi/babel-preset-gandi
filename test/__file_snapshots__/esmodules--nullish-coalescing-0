@@ -1,3 +1,2 @@
-var _obj$foo;
 let obj = {};
-let foo = (_obj$foo = obj.foo) !== null && _obj$foo !== void 0 ? _obj$foo : 'default';
+let foo = obj.foo ?? 'default';

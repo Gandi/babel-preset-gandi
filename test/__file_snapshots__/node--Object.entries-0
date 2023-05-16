@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
-var _entries = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/entries"));
-(0, _entries.default)({
+Object.entries({
   a: 1
 });

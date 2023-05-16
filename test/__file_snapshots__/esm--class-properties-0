@@ -1,9 +1,3 @@
-import _createClass from "@babel/runtime-corejs3/helpers/createClass";
-import _classCallCheck from "@babel/runtime-corejs3/helpers/classCallCheck";
-import _defineProperty from "@babel/runtime-corejs3/helpers/defineProperty";
-var A = /*#__PURE__*/_createClass(function A() {
-  _classCallCheck(this, A);
-  _defineProperty(this, "a", function () {
-    return 'hello';
-  });
-});
+class A {
+  a = () => 'hello';
+}

@@ -23,26 +23,15 @@
 /**
  * 1. Ensure all helpers are imported instead of inlined.
  *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
- *
- * 2. Temporary, see https://github.com/Gandi/babel-preset-gandi/pull/42
  */
 
 module.exports = (context, options = {}) => {
-  let envOpts = Object.assign(
-    {
-      targets: {
-        browsers: [
-          'last 2 versions',
-          '> 1%',
-          'not dead',
-          'Firefox ESR',
-          'IE 11', // 2
-        ],
-      },
-      bugfixes: options.targets && options.targets.esmodules === true,
-    },
-    options,
-  );
+  let envOpts = {
+    corejs: '3',
+    bugfixes: true,
+    useBuiltIns: 'usage',
+    ...options,
+  };
 
   let runtimeOpts = {
     corejs: 3,
