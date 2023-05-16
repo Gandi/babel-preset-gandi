@@ -3,7 +3,8 @@
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
 var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createClass"));
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/classCallCheck"));
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/defineProperty"));
 var A = /*#__PURE__*/(0, _createClass2.default)(function A() {
   (0, _classCallCheck2.default)(this, A);
 });
-A.a = 'hello';
+(0, _defineProperty2.default)(A, "a", 'hello');

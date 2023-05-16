@@ -1,7 +1,5 @@
 "use strict";
 
 class A {
-  constructor() {
-    this.a = () => 'hello';
-  }
+  a = () => 'hello';
 }
