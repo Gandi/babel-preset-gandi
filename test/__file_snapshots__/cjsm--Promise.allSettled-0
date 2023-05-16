@@ -1,9 +1,10 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
-var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
+var _forEach = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/for-each"));
 _promise.default.allSettled([_promise.default.resolve(1), _promise.default.resolve(2)]).then(function (rs) {
-  return rs.forEach(function (r) {
+  return (0, _forEach.default)(rs).call(rs, function (r) {
     return console.log(r.status);
   });
 });

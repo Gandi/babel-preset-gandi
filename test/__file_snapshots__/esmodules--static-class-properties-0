@@ -1,3 +1,3 @@
-import _defineProperty from "@babel/runtime-corejs2/helpers/defineProperty";
+import _defineProperty from "@babel/runtime-corejs3/helpers/defineProperty";
 class A {}
 _defineProperty(A, "a", 'hello');
