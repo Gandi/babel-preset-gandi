@@ -1,8 +1,5 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
-var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 var _interopRequireWildcard2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/interopRequireWildcard"));
-_promise.default.resolve().then(function () {
-  return (0, _interopRequireWildcard2.default)(require('./a'));
-});
+Promise.resolve().then(() => (0, _interopRequireWildcard2.default)(require('./a')));

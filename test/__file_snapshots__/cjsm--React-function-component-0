@@ -2,13 +2,11 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/extends"));
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/objectWithoutProperties"));
-var _excluded = ["type", "children"];
-function Button(_ref) {
-  var _ref$type = _ref.type,
-    type = _ref$type === void 0 ? 'button' : _ref$type,
-    children = _ref.children,
-    extraProps = (0, _objectWithoutProperties2.default)(_ref, _excluded);
+function Button({
+  type = 'button',
+  children,
+  ...extraProps
+}) {
   return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
     type: type
   }, extraProps), children);

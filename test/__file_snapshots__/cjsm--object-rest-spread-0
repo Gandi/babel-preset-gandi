@@ -1,5 +1,5 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault").default;
-var _objectSpread2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/objectSpread2"));
-var b = (0, _objectSpread2.default)({}, a);
+let b = {
+  ...a
+};
