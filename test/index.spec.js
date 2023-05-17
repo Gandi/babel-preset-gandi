@@ -125,7 +125,7 @@ let cases = [
         }
 
         render() {
-          const { type = 'button', ...extraProps } = this.props;
+          const { type = 'button', children, ...extraProps } = this.props;
 
           return (
             <button type={type} onClick={this.handleClick} {...extraProps}>

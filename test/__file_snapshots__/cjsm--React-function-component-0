@@ -1,12 +1,14 @@
 "use strict";
 
+var _jsxRuntime = require("react/jsx-runtime");
 function Button({
   type = 'button',
   children,
   ...extraProps
 }) {
-  return /*#__PURE__*/React.createElement("button", {
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
     type: type,
-    ...extraProps
-  }, children);
+    ...extraProps,
+    children: children
+  });
 }
