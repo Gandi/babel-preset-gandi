@@ -35,6 +35,7 @@ module.exports = (context, options = {}) => {
 
   let reactOpts = {
     useSpread: true,
+    runtime: 'automatic',
   };
 
   let runtimeOpts = {

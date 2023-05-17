@@ -1,4 +1,6 @@
-/*#__PURE__*/React.createElement("div", {
+import { jsx as _jsx } from "react/jsx-runtime";
+/*#__PURE__*/_jsx("div", {
   a: true,
-  ...b
-}, "hello");
+  ...b,
+  children: "hello"
+});

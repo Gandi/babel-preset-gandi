@@ -10,6 +10,7 @@
     * Don't setup the Browserslist query inside the preset. 
     * Use `useBuiltIns: 'usage'` for polyfills handling.
     * Use React preset `useSpread` options.
+    * Use JSX automatic runtime.
 
 ## 5.15.0 - 2024-03-06
 ### Changed

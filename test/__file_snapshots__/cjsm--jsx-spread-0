@@ -1,6 +1,8 @@
 "use strict";
 
-/*#__PURE__*/React.createElement("div", {
+var _jsxRuntime = require("react/jsx-runtime");
+/*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
   a: true,
-  ...b
-}, "hello");
+  ...b,
+  children: "hello"
+});
