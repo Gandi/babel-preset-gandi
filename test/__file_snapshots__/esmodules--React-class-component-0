@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
 class Button extends React.Component {
   handleClick = async evt => {
     evt.preventDefault();
@@ -7,12 +8,14 @@ class Button extends React.Component {
   render() {
     const {
       type = 'button',
+      children,
       ...extraProps
     } = this.props;
-    return /*#__PURE__*/React.createElement("button", {
+    return /*#__PURE__*/_jsx("button", {
       type: type,
       onClick: this.handleClick,
-      ...extraProps
-    }, children);
+      ...extraProps,
+      children: children
+    });
   }
 }
