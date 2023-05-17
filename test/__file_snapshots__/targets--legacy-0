@@ -1,0 +1,45 @@
+// Babel targets
+{
+  "android": "109.0.0",
+  "chrome": "108.0.0",
+  "edge": "108.0.0",
+  "firefox": "102.0.0",
+  "ios": "14.5.0",
+  "opera": "94.0.0",
+  "safari": "15.6.0",
+  "samsung": "18.0.0"
+}
+// Browerslist targets
+[
+  "and_chr 109",
+  "and_ff 109",
+  "and_qq 13.1",
+  "and_uc 13.4",
+  "android 109",
+  "chrome 110",
+  "chrome 109",
+  "chrome 108",
+  "edge 110",
+  "edge 109",
+  "edge 108",
+  "firefox 110",
+  "firefox 109",
+  "firefox 108",
+  "firefox 102",
+  "ios_saf 16.3",
+  "ios_saf 16.2",
+  "ios_saf 16.1",
+  "ios_saf 16.0",
+  "ios_saf 15.6",
+  "ios_saf 14.5-14.8",
+  "kaios 2.5",
+  "op_mini all",
+  "op_mob 73",
+  "opera 95",
+  "opera 94",
+  "safari 16.3",
+  "safari 16.2",
+  "safari 15.6",
+  "samsung 19.0",
+  "samsung 18.0"
+]
