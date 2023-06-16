@@ -1,9 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime-corejs3/helpers/interopRequireWildcard").default;
-var React = _interopRequireWildcard(require("react"));
+var _react = require("react");
 var _jsxRuntime = require("react/jsx-runtime");
-class Button extends React.Component {
+class Button extends _react.Component {
   handleClick = async evt => {
     evt.preventDefault();
     await fetch('/foo');
