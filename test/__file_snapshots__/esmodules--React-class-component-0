@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { Component } from 'react';
 import { jsx as _jsx } from "react/jsx-runtime";
-class Button extends React.Component {
+class Button extends Component {
   handleClick = async evt => {
     evt.preventDefault();
     await fetch('/foo');

@@ -116,9 +116,9 @@ let cases = [
   [
     'React class component',
     `
-      import * as React from 'react';
+      import { Component } from 'react';
 
-      class Button extends React.Component {
+      class Button extends Component {
         handleClick = async (evt) => {
           evt.preventDefault();
           await fetch('/foo');
