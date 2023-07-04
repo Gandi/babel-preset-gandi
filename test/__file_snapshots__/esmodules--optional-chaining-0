@@ -1,4 +1,4 @@
-var _obj$foo, _obj$foo$bar, _obj$qux;
+var _obj$foo, _obj$qux;
 let obj = {
   foo: {
     bar: {
@@ -6,6 +6,5 @@ let obj = {
     }
   }
 };
-let baz = obj === null || obj === void 0 ? void 0 : (_obj$foo = obj.foo) === null || _obj$foo === void 0 ? void 0 : (_obj$foo$bar = _obj$foo.bar) === null || _obj$foo$bar === void 0 ? void 0 : _obj$foo$bar.baz; // 42
-
-let safe = obj === null || obj === void 0 ? void 0 : (_obj$qux = obj.qux) === null || _obj$qux === void 0 ? void 0 : _obj$qux.baz; // undefined
+let baz = obj === null || obj === void 0 || (_obj$foo = obj.foo) === null || _obj$foo === void 0 || (_obj$foo = _obj$foo.bar) === null || _obj$foo === void 0 ? void 0 : _obj$foo.baz;
+let safe = obj === null || obj === void 0 || (_obj$qux = obj.qux) === null || _obj$qux === void 0 ? void 0 : _obj$qux.baz;

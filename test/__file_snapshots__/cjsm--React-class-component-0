@@ -29,7 +29,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
             case 0:
               evt.preventDefault();
               _context.next = 3;
-              return fetch('/foo');
+              return fetch("/foo");
             case 3:
             case "end":
               return _context.stop();
@@ -47,7 +47,7 @@ var Button = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
         _this$props$type = _this$props.type,
-        type = _this$props$type === void 0 ? 'button' : _this$props$type,
+        type = _this$props$type === void 0 ? "button" : _this$props$type,
         extraProps = (0, _objectWithoutProperties2.default)(_this$props, _excluded);
       return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
         type: type,

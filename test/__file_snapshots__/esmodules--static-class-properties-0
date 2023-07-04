@@ -1,2 +1,2 @@
 class A {}
-A.a = 'hello';
+A.a = "hello";

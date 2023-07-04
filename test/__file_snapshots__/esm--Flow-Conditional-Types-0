@@ -1,0 +1,8 @@
+import _createClass from "@babel/runtime-corejs2/helpers/createClass";
+import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
+var Vehicle = /*#__PURE__*/_createClass(function Vehicle() {
+  _classCallCheck(this, Vehicle);
+});
+var Car = /*#__PURE__*/_createClass(function Car() {
+  _classCallCheck(this, Car);
+});

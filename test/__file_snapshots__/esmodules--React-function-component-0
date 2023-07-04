@@ -3,7 +3,7 @@ import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/objectWitho
 const _excluded = ["type", "children"];
 function Button(_ref) {
   let {
-      type = 'button',
+      type = "button",
       children
     } = _ref,
     extraProps = _objectWithoutProperties(_ref, _excluded);

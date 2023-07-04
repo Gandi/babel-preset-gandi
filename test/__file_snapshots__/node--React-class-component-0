@@ -9,12 +9,12 @@ class Button extends React.Component {
     super(...args);
     this.handleClick = async evt => {
       evt.preventDefault();
-      await fetch('/foo');
+      await fetch("/foo");
     };
   }
   render() {
     const {
-      type = 'button',
+      type = "button",
       ...extraProps
     } = this.props;
     return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
