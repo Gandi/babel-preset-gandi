@@ -5,11 +5,11 @@ var _jsxRuntime = require("react/jsx-runtime");
 class Button extends _react.Component {
   handleClick = async evt => {
     evt.preventDefault();
-    await fetch('/foo');
+    await fetch("/foo");
   };
   render() {
     const {
-      type = 'button',
+      type = "button",
       children,
       ...extraProps
     } = this.props;
