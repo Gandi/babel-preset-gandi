@@ -2,7 +2,7 @@
 
 var _jsxRuntime = require("react/jsx-runtime");
 function Button({
-  type = 'button',
+  type = "button",
   children,
   ...extraProps
 }) {
