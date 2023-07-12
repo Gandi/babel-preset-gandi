@@ -156,6 +156,20 @@ let cases = [
     [1, 2].flatMap(x => [x * 2])
     `,
   ],
+  [
+    'Flow Type Guards',
+    `
+    function foo(node: any): node is Node {}
+    `,
+  ],
+  [
+    'Flow Conditional Types',
+    `
+    class Vehicle {}
+    class Car {}
+    type Test = Car extends Vehicle ? 'yep' : 'nope'
+    `,
+  ],
 ];
 
 test.each(cases)('cjsm: %s', (name, input) => {

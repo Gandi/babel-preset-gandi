@@ -1,4 +1,4 @@
 "use strict";
 
 let obj = {};
-let foo = obj.foo ?? 'default';
+let foo = obj.foo ?? "default";

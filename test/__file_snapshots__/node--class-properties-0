@@ -2,6 +2,6 @@
 
 class A {
   constructor() {
-    this.a = () => 'hello';
+    this.a = () => "hello";
   }
 }

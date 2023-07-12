@@ -11,6 +11,9 @@
  * [Flow]
  * https://babeljs.io/docs/en/babel-preset-flow
  *
+ * [Hermes Parser]
+ * https://github.com/facebook/hermes/blob/main/tools/hermes-parser/js/babel-plugin-syntax-hermes-parser/README.md
+ *
  * [Other]
  * https://babeljs.io/docs/en/babel-plugin-transform-runtime
  */
@@ -59,6 +62,7 @@ module.exports = (context, options = {}) => {
   ];
 
   let plugins = [
+    'babel-plugin-syntax-hermes-parser',
     '@babel/plugin-transform-flow-strip-types', // 2
     ['@babel/plugin-proposal-private-methods', { loose: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],
