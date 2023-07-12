@@ -45,7 +45,7 @@ module.exports = (context, options = {}) => {
       },
       bugfixes: options.targets && options.targets.esmodules === true,
     },
-    options
+    options,
   );
 
   let runtimeOpts = {
