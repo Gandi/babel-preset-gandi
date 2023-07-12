@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.13.0 - 2023-07-12
 ### Changed
   * Switch to Hermes parser to gain better Flow support and performances.
 
