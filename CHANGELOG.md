@@ -1,7 +1,11 @@
 # Change log
 
 ## [Unreleased]
-
+### Changed
+  * Revert the switch to Hermes parser for now.
+    Issues within Storybook and while compliling some of our third parties.
+    No support for private properties currently.
+  
 ## 5.13.0 - 2023-07-12
 ### Changed
   * Switch to Hermes parser to gain better Flow support and performances.

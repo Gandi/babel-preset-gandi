@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
 function Button({
-  type = "button",
+  type = 'button',
   children,
   ...extraProps
 }) {

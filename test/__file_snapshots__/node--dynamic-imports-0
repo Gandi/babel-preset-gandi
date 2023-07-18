@@ -3,4 +3,4 @@
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
 var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
 var _interopRequireWildcard2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/interopRequireWildcard"));
-_promise.default.resolve().then(() => (0, _interopRequireWildcard2.default)(require("./a")));
+_promise.default.resolve().then(() => (0, _interopRequireWildcard2.default)(require('./a')));
