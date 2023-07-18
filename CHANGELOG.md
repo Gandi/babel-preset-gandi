@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 5.13.1 - 2023-07-18
 ### Changed
   * Revert the switch to Hermes parser for now.
     Issues within Storybook and while compliling some of our third parties.
