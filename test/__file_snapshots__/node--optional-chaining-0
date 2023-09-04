@@ -7,6 +7,5 @@ let obj = {
     }
   }
 };
-let baz = obj?.foo?.bar?.baz; // 42
-
-let safe = obj?.qux?.baz; // undefined
+let baz = obj?.foo?.bar?.baz;
+let safe = obj?.qux?.baz;

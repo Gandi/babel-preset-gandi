@@ -1,5 +1,7 @@
 const { transform } = require('@babel/core');
 const { toMatchFile } = require('jest-file-snapshot');
+const browserslist = require('browserslist');
+
 const preset = require('../');
 
 expect.extend({ toMatchFile });
@@ -114,16 +116,16 @@ let cases = [
   [
     'React class component',
     `
-      import * as React from 'react';
+      import { Component } from 'react';
 
-      class Button extends React.Component {
+      class Button extends Component {
         handleClick = async (evt) => {
           evt.preventDefault();
           await fetch('/foo');
         }
 
         render() {
-          const { type = 'button', ...extraProps } = this.props;
+          const { type = 'button', children, ...extraProps } = this.props;
 
           return (
             <button type={type} onClick={this.handleClick} {...extraProps}>
@@ -156,10 +158,25 @@ let cases = [
     [1, 2].flatMap(x => [x * 2])
     `,
   ],
+  [
+    'Flow Type Guards',
+    `
+    function foo(node: any): node is Node {}
+    `,
+  ],
+  [
+    'Flow Conditional Types',
+    `
+    class Vehicle {}
+    class Car {}
+    type Test = Car extends Vehicle ? 'yep' : 'nope'
+    `,
+  ],
 ];
 
 test.each(cases)('cjsm: %s', (name, input) => {
   let { code } = transform(input, {
+    targets: { browsers: 'defaults' },
     presets: [preset],
   });
 
@@ -168,6 +185,7 @@ test.each(cases)('cjsm: %s', (name, input) => {
 
 test.each(cases)('esm: %s', (name, input) => {
   let { code } = transform(input, {
+    targets: { browsers: 'defaults' },
     presets: [[preset, { modules: false }]],
   });
 
@@ -176,7 +194,8 @@ test.each(cases)('esm: %s', (name, input) => {
 
 test.each(cases)('esmodules: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { modules: false, targets: { esmodules: true } }]],
+    targets: { browsers: 'defaults', esmodules: true },
+    presets: [[preset, { modules: false }]],
   });
 
   expect(code).toMatchFile();
@@ -184,8 +203,49 @@ test.each(cases)('esmodules: %s', (name, input) => {
 
 test.each(cases)('node: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { targets: { node: 18 } }]],
+    targets: { node: 18 },
+    presets: [preset],
   });
 
   expect(code).toMatchFile();
+});
+
+test('targets: modern', () => {
+  let {
+    options: { targets },
+  } = transform('', {
+    targets: { browsers: 'defaults', esmodules: true },
+    presets: [[preset, { modules: false }]],
+  });
+
+  let browsers = browserslist('defaults and supports es6-module');
+
+  let result = [
+    '// Babel targets',
+    JSON.stringify(targets, null, 2),
+    '// Browerslist targets',
+    JSON.stringify(browsers, null, 2),
+  ].join('\n');
+
+  expect(result).toMatchFile();
+});
+
+test('targets: legacy', () => {
+  let {
+    options: { targets },
+  } = transform('', {
+    targets: { browsers: 'defaults' },
+    presets: [[preset, { modules: false }]],
+  });
+
+  let browsers = browserslist('defaults');
+
+  let result = [
+    '// Babel targets',
+    JSON.stringify(targets, null, 2),
+    '// Browerslist targets',
+    JSON.stringify(browsers, null, 2),
+  ].join('\n');
+
+  expect(result).toMatchFile();
 });

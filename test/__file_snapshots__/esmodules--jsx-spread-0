@@ -1,4 +1,6 @@
-import _extends from "@babel/runtime-corejs2/helpers/extends";
-/*#__PURE__*/React.createElement("div", _extends({
-  a: true
-}, b), "hello");
+import { jsx as _jsx } from "react/jsx-runtime";
+/*#__PURE__*/_jsx("div", {
+  a: true,
+  ...b,
+  children: "hello"
+});

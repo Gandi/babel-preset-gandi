@@ -1,3 +1,4 @@
-var A = function A() {
-  return /*#__PURE__*/React.createElement("div", null, "hello");
-};
+import { jsx as _jsx } from "react/jsx-runtime";
+let A = () => /*#__PURE__*/_jsx("div", {
+  children: "hello"
+});

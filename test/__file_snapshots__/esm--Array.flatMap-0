@@ -1,3 +1,1 @@
-[1, 2].flatMap(function (x) {
-  return [x * 2];
-});
+[1, 2].flatMap(x => [x * 2]);
