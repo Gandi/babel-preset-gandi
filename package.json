@@ -27,9 +27,7 @@
   "scripts": {
     "test": "jest"
   },
-  "engines": {
-    "npm": ">=8.3.0"
-  },
+  "packageManager": "npm@9.8.1",
   "overrides": {
     "browserslist": "^4.21.5"
   },
