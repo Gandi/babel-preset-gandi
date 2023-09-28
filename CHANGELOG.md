@@ -1,6 +1,7 @@
 # Change log
 
 ## [Unreleased]
+  * Babel `7.23.x` upgrades.
 
 ## 5.13.1 - 2023-07-18
 ### Changed
