@@ -1,23 +1,26 @@
+import _Reflect$construct from "@babel/runtime-corejs2/core-js/reflect/construct";
 import _extends from "@babel/runtime-corejs2/helpers/extends";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/objectWithoutProperties";
 import _regeneratorRuntime from "@babel/runtime-corejs2/helpers/regeneratorRuntime";
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/asyncToGenerator";
 import _classCallCheck from "@babel/runtime-corejs2/helpers/classCallCheck";
 import _createClass from "@babel/runtime-corejs2/helpers/createClass";
+import _possibleConstructorReturn from "@babel/runtime-corejs2/helpers/possibleConstructorReturn";
+import _isNativeReflectConstruct from "@babel/runtime-corejs2/helpers/isNativeReflectConstruct";
+import _getPrototypeOf from "@babel/runtime-corejs2/helpers/getPrototypeOf";
 import _inherits from "@babel/runtime-corejs2/helpers/inherits";
-import _createSuper from "@babel/runtime-corejs2/helpers/createSuper";
 var _excluded = ["type"];
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? _Reflect$construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 import * as React from 'react';
 var Button = /*#__PURE__*/function (_React$Component) {
   _inherits(Button, _React$Component);
-  var _super = _createSuper(Button);
   function Button() {
     var _this;
     _classCallCheck(this, Button);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _callSuper(this, Button, [].concat(args));
     _this.handleClick = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(evt) {
         return _regeneratorRuntime().wrap(function _callee$(_context) {

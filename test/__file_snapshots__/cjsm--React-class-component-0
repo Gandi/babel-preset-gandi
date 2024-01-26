@@ -1,5 +1,6 @@
 "use strict";
 
+var _Reflect$construct = require("@babel/runtime-corejs2/core-js/reflect/construct");
 var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
 var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard").default;
 var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
@@ -8,20 +9,22 @@ var _regeneratorRuntime2 = _interopRequireDefault(require("@babel/runtime-corejs
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/asyncToGenerator"));
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createClass"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/possibleConstructorReturn"));
+var _isNativeReflectConstruct2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/isNativeReflectConstruct"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/getPrototypeOf"));
 var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/inherits"));
-var _createSuper2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/createSuper"));
 var React = _interopRequireWildcard(require("react"));
 var _excluded = ["type"];
+function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2.default)(o), (0, _possibleConstructorReturn2.default)(t, (0, _isNativeReflectConstruct2.default)() ? _Reflect$construct(o, e || [], (0, _getPrototypeOf2.default)(t).constructor) : o.apply(t, e)); }
 var Button = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Button, _React$Component);
-  var _super = (0, _createSuper2.default)(Button);
   function Button() {
     var _this;
     (0, _classCallCheck2.default)(this, Button);
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _callSuper(this, Button, [].concat(args));
     _this.handleClick = /*#__PURE__*/function () {
       var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/(0, _regeneratorRuntime2.default)().mark(function _callee(evt) {
         return (0, _regeneratorRuntime2.default)().wrap(function _callee$(_context) {
