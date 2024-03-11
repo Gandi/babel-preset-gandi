@@ -1,0 +1,10 @@
+function Foo() {
+  return /*#__PURE__*/React.createElement("div", null);
+}
+function Bar() {
+  return /*#__PURE__*/React.createElement(Foo, null);
+}
+function Baz(_ref) {
+  var foo = _ref.foo;
+  /*#__PURE__*/React.createElement("div", null, foo);
+}

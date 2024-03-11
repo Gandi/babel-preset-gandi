@@ -59,6 +59,7 @@ module.exports = (context, options = {}) => {
   ];
 
   let plugins = [
+    'babel-plugin-syntax-hermes-parser',
     '@babel/plugin-transform-flow-strip-types', // 2
     ['@babel/plugin-proposal-private-methods', { loose: true }],
     ['@babel/plugin-proposal-class-properties', { loose: true }],

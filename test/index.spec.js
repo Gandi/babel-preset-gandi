@@ -156,6 +156,14 @@ let cases = [
     [1, 2].flatMap(x => [x * 2])
     `,
   ],
+  [
+    'Flow render types',
+    `
+    component Foo() { return <div /> }
+    component Bar() renders Foo { return <Foo /> }
+    component Baz(foo: renders Foo) { <div>{foo}</div> }
+    `,
+  ],
 ];
 
 test.each(cases)('cjsm: %s', (name, input) => {
