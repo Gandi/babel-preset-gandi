@@ -184,7 +184,7 @@ test.each(cases)('esmodules: %s', (name, input) => {
 
 test.each(cases)('node: %s', (name, input) => {
   let { code } = transform(input, {
-    presets: [[preset, { targets: { node: 20 } }]],
+    presets: [[preset, { targets: { node: 22 } }]],
   });
 
   expect(code).toMatchFile();
