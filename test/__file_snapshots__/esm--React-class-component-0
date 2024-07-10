@@ -9,7 +9,6 @@ import _inherits from "@babel/runtime-corejs2/helpers/inherits";
 var _excluded = ["type"];
 import * as React from 'react';
 var Button = /*#__PURE__*/function (_React$Component) {
-  _inherits(Button, _React$Component);
   function Button() {
     var _this;
     _classCallCheck(this, Button);
@@ -37,7 +36,8 @@ var Button = /*#__PURE__*/function (_React$Component) {
     }();
     return _this;
   }
-  _createClass(Button, [{
+  _inherits(Button, _React$Component);
+  return _createClass(Button, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -50,5 +50,4 @@ var Button = /*#__PURE__*/function (_React$Component) {
       }, extraProps), children);
     }
   }]);
-  return Button;
 }(React.Component);

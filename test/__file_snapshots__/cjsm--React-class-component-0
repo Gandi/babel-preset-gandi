@@ -13,7 +13,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/
 var React = _interopRequireWildcard(require("react"));
 var _excluded = ["type"];
 var Button = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(Button, _React$Component);
   function Button() {
     var _this;
     (0, _classCallCheck2.default)(this, Button);
@@ -41,7 +40,8 @@ var Button = /*#__PURE__*/function (_React$Component) {
     }();
     return _this;
   }
-  (0, _createClass2.default)(Button, [{
+  (0, _inherits2.default)(Button, _React$Component);
+  return (0, _createClass2.default)(Button, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -54,5 +54,4 @@ var Button = /*#__PURE__*/function (_React$Component) {
       }, extraProps), children);
     }
   }]);
-  return Button;
 }(React.Component);
