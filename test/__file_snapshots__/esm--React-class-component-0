@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime-corejs2/helpers/extends";
+import _objectSpread from "@babel/runtime-corejs2/helpers/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime-corejs2/helpers/objectWithoutProperties";
 import _regeneratorRuntime from "@babel/runtime-corejs2/helpers/regeneratorRuntime";
 import _asyncToGenerator from "@babel/runtime-corejs2/helpers/asyncToGenerator";
@@ -8,6 +8,7 @@ import _callSuper from "@babel/runtime-corejs2/helpers/callSuper";
 import _inherits from "@babel/runtime-corejs2/helpers/inherits";
 var _excluded = ["type"];
 import * as React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
 var Button = /*#__PURE__*/function (_React$Component) {
   function Button() {
     var _this;
@@ -44,10 +45,12 @@ var Button = /*#__PURE__*/function (_React$Component) {
         _this$props$type = _this$props.type,
         type = _this$props$type === void 0 ? 'button' : _this$props$type,
         extraProps = _objectWithoutProperties(_this$props, _excluded);
-      return /*#__PURE__*/React.createElement("button", _extends({
+      return /*#__PURE__*/_jsx("button", _objectSpread(_objectSpread({
         type: type,
         onClick: this.handleClick
-      }, extraProps), children);
+      }, extraProps), {}, {
+        children: children
+      }));
     }
   }]);
 }(React.Component);

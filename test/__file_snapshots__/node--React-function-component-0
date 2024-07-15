@@ -1,13 +1,14 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault").default;
-var _extends2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/extends"));
+var _jsxRuntime = require("react/jsx-runtime");
 function Button({
   type = 'button',
   children,
   ...extraProps
 }) {
-  return /*#__PURE__*/React.createElement("button", (0, _extends2.default)({
-    type: type
-  }, extraProps), children);
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
+    type: type,
+    ...extraProps,
+    children: children
+  });
 }
