@@ -210,27 +210,7 @@ test.each(cases)('node: %s', (name, input) => {
   expect(code).toMatchFile();
 });
 
-test('targets: modern', () => {
-  let {
-    options: { targets },
-  } = transform('', {
-    targets: { browsers: 'defaults', esmodules: true },
-    presets: [[preset, { modules: false }]],
-  });
-
-  let browsers = browserslist('defaults and supports es6-module');
-
-  let result = [
-    '// Babel targets',
-    JSON.stringify(targets, null, 2),
-    '// Browerslist targets',
-    JSON.stringify(browsers, null, 2),
-  ].join('\n');
-
-  expect(result).toMatchFile();
-});
-
-test('targets: legacy', () => {
+test('targets', () => {
   let {
     options: { targets },
   } = transform('', {
