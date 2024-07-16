@@ -1,5 +1,5 @@
 /**
- * [ES2020+]
+ * [ES2022+]
  * https://babeljs.io/docs/en/babel-preset-env
  *
  * [React]
@@ -30,9 +30,7 @@
 
 module.exports = (context, options = {}) => {
   let envOpts = {
-    corejs: '3',
     bugfixes: true,
-    useBuiltIns: 'usage',
     ...options,
   };
 

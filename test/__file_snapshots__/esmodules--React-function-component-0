@@ -1,6 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 function Button({
-  type = "button",
+  type = 'button',
   children,
   ...extraProps
 }) {

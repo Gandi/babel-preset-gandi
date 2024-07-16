@@ -1,5 +1,5 @@
 "use strict";
 
 class A {
-  static a = "hello";
+  static a = 'hello';
 }
