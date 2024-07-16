@@ -12,6 +12,8 @@
   * Use React preset `useSpread` options.
   * Use JSX automatic runtime
   * Use `babel-plugin-syntax-hermes-parser` for parser.
+  **BREAKING** 
+  * Now requires `@babel/runtime-corejs3` as peerDependency.
 
 ## 5.15.0 - 2024-03-06
 ### Changed
