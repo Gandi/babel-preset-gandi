@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 6.0.0 - 2024-07-16
 ### Changed
   * Remove loose mode usage of class properties/methods plugins.
   * Core-js 3 upgrade.
