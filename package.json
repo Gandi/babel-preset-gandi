@@ -10,7 +10,7 @@
   "homepage": "https://github.com/Gandi/babel-preset-gandi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Gandi/babel-preset-gandi"
+    "url": "git+https://github.com/Gandi/babel-preset-gandi.git"
   },
   "bugs": {
     "url": "https://github.com/Gandi/babel-preset-gandi/issues"
