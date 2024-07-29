@@ -9,7 +9,7 @@
  * https://babeljs.io/docs/en/babel-preset-flow
  *
  * [Hermes Parser]
- * https://github.com/facebook/hermes/blob/main/tools/hermes-parser/js/babel-plugin-syntax-hermes-parser/README.md
+ * https://github.com/facebook/hermes/blob/main/tools/hermes-parser/js/babel-plugin-syntax-hermes-parser
  *
  * [Other]
  * https://babeljs.io/docs/en/babel-plugin-transform-runtime
@@ -43,7 +43,7 @@ module.exports = (context, options = {}) => {
     corejs: 3,
     helpers: true,
     regenerator: true,
-    version: '7.24.0', // 1
+    version: '7.25.0', // 1
   };
 
   let presets = [

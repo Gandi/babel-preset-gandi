@@ -1,7 +1,7 @@
 # babel-preset-gandi
 
 Shareable [Babel](https://github.com/babel/babel) preset for [Gandi](https://github.com/Gandi).  
-Includes ES2018+, React, Flow, as well as common transforms and polyfills.
+Includes ES2022+, React, Flow, as well as common transforms and polyfills.
 
 
 ## Installation
