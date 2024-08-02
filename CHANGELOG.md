@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Added
   * Make the Hermes parser optional and disabled by default.
+    It can now be activated by setting hte `parser` option
+    `[["@gandi/gandi", { "parser": "hermes" }]]`.
 
 ## 6.1.0 - 2024-07-29
 ### Changed

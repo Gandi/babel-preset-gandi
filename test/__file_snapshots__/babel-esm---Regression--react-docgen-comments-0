@@ -1,0 +1,2 @@
+/**  @component */
+function Foo() {}
