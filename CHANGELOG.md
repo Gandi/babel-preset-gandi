@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 6.2.0 - 2024-08-02
 ### Added
   * Make the Hermes parser optional and disabled by default.
     It can now be activated by setting hte `parser` option
