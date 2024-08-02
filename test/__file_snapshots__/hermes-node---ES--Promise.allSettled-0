@@ -1,0 +1,3 @@
+"use strict";
+
+Promise.allSettled([Promise.resolve(1), Promise.resolve(2)]).then(rs => rs.forEach(r => console.log(r.status)));
