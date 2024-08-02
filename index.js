@@ -29,9 +29,11 @@
  */
 
 module.exports = (context, options = {}) => {
+  let { parser = 'babel', ...envOptions } = options;
+
   let envOpts = {
     bugfixes: true,
-    ...options,
+    ...envOptions,
   };
 
   let reactOpts = {
@@ -53,7 +55,7 @@ module.exports = (context, options = {}) => {
   ];
 
   let plugins = [
-    'babel-plugin-syntax-hermes-parser',
+    ...(parser === 'hermes' ? 'babel-plugin-syntax-hermes-parser' : []),
     ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
 
