@@ -33,6 +33,7 @@ module.exports = (context, options = {}) => {
 
   let envOpts = {
     bugfixes: true,
+    shippedProposals: true,
     ...envOptions,
   };
 
