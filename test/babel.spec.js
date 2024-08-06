@@ -6,9 +6,10 @@ const preset = require('../');
 const es = require('./fixtures/es');
 const flow = require('./fixtures/flow');
 const react = require('./fixtures/react');
+const proposals = require('./fixtures/proposals');
 const regressions = require('./fixtures/regressions');
 
-let cases = [...es, ...flow, ...react, ...regressions];
+let cases = [...es, ...flow, ...react, ...proposals, ...regressions];
 
 expect.extend({ toMatchFile });
 
