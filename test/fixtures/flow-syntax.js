@@ -28,4 +28,12 @@ module.exports = [
     type MappedType = {[key in Union]: number}
     `,
   ],
+  [
+    'Flow render types',
+    `
+    component Foo() { return <div /> }
+    component Bar() renders Foo { return <Foo /> }
+    component Baz(foo: renders Foo) { <div>{foo}</div> }
+    `,
+  ],
 ];
