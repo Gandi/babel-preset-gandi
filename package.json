@@ -27,20 +27,20 @@
   "scripts": {
     "test": "jest"
   },
-  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb",
+  "packageManager": "npm@10.8.3+sha512.d08425c8062f56d43bb8e84315864218af2492eb769e1f1ca40740f44e85bd148969382d651660363942e5909cb7ffcbef7ca0ae963ddc2c57a51243b4da8f56",
   "overrides": {
     "browserslist": "$browserslist"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.24.7",
-    "@babel/preset-env": "^7.25.3",
+    "@babel/plugin-transform-runtime": "^7.25.4",
+    "@babel/preset-env": "^7.25.4",
     "@babel/preset-flow": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
     "babel-plugin-syntax-hermes-parser": "^0.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/runtime-corejs3": "^7.25.0",
+    "@babel/runtime-corejs3": "^7.25.6",
     "browserslist": "^4.23.3",
     "jest": "^29.7.0",
     "jest-file-snapshot": "^0.7.0",
