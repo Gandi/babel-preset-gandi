@@ -11,13 +11,19 @@
  * [Hermes Parser]
  * https://github.com/facebook/hermes/blob/main/tools/hermes-parser/js/babel-plugin-syntax-hermes-parser
  *
- * [Other]
+ * [Ponyfills]
  * https://babeljs.io/docs/en/babel-plugin-transform-runtime
  */
 
+const { declarePreset } = require('@babel/helper-plugin-utils');
+const presetEnv = require('@babel/preset-env');
+const presetFlow = require('@babel/preset-flow');
+const presetReact = require('@babel/preset-react');
+const transformRuntime = require('@babel/plugin-transform-runtime');
+const syntaxHermesParser = require('babel-plugin-syntax-hermes-parser');
+
 /**
- * Notes
- *
+ * [Notes]
  * Presets are run in the reverse order they are defined.
  * Plugins are run in the order they are defined below,
  * but they are run *before* presets.
@@ -26,19 +32,27 @@
 /**
  * 1. Ensure all helpers are imported instead of inlined.
  *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
+ * 2. Will set as default from Babel 8.
  */
 
-module.exports = (context, options = {}) => {
+module.exports = declarePreset((api, options = {}) => {
+  api.assertVersion(7);
+
   let { parser = 'babel', ...envOptions } = options;
 
   let envOpts = {
-    bugfixes: true,
+    bugfixes: true, // 2
+    shippedProposals: true,
     ...envOptions,
   };
 
   let reactOpts = {
-    useSpread: true,
-    runtime: 'automatic',
+    useSpread: true, // 2
+    runtime: 'automatic', // 2
+  };
+
+  let flowOpts = {
+    // allowDeclareFields: true, // 2
   };
 
   let runtimeOpts = {
@@ -49,18 +63,18 @@ module.exports = (context, options = {}) => {
   };
 
   let presets = [
-    ['@babel/preset-env', envOpts],
-    ['@babel/preset-react', reactOpts],
-    '@babel/preset-flow',
+    [presetEnv, envOpts],
+    [presetReact, reactOpts],
+    [presetFlow, flowOpts],
   ];
 
   let plugins = [
-    ...(parser === 'hermes' ? ['babel-plugin-syntax-hermes-parser'] : []),
-    ['@babel/plugin-transform-runtime', runtimeOpts],
+    ...(parser === 'hermes' ? [syntaxHermesParser] : []),
+    [transformRuntime, runtimeOpts],
   ];
 
   return {
     presets,
     plugins,
   };
-};
+});
