@@ -32,6 +32,7 @@ const syntaxHermesParser = require('babel-plugin-syntax-hermes-parser');
 /**
  * 1. Ensure all helpers are imported instead of inlined.
  *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
+ * 2. Will set as default from Babel 8.
  */
 
 module.exports = declarePreset((api, options = {}) => {
@@ -40,14 +41,18 @@ module.exports = declarePreset((api, options = {}) => {
   let { parser = 'babel', ...envOptions } = options;
 
   let envOpts = {
-    bugfixes: true,
+    bugfixes: true, // 2
     shippedProposals: true,
     ...envOptions,
   };
 
   let reactOpts = {
-    useSpread: true,
-    runtime: 'automatic',
+    useSpread: true, // 2
+    runtime: 'automatic', // 2
+  };
+
+  let flowOpts = {
+    // allowDeclareFields: true, // 2
   };
 
   let runtimeOpts = {
@@ -57,7 +62,11 @@ module.exports = declarePreset((api, options = {}) => {
     version: '7.25.0', // 1
   };
 
-  let presets = [[presetEnv, envOpts], [presetReact, reactOpts], presetFlow];
+  let presets = [
+    [presetEnv, envOpts],
+    [presetReact, reactOpts],
+    [presetFlow, flowOpts],
+  ];
 
   let plugins = [
     ...(parser === 'hermes' ? [syntaxHermesParser] : []),
