@@ -1,6 +1,6 @@
 // Babel targets
 {
-  "android": "127.0.0",
+  "android": "128.0.0",
   "chrome": "109.0.0",
   "edge": "127.0.0",
   "firefox": "115.0.0",
@@ -17,6 +17,7 @@
   "and_qq 14.9",
   "and_uc 15.5",
   "android 128",
+  "chrome 129",
   "chrome 128",
   "chrome 127",
   "chrome 126",
@@ -27,6 +28,7 @@
   "firefox 129",
   "firefox 128",
   "firefox 115",
+  "ios_saf 18.0",
   "ios_saf 17.6",
   "ios_saf 17.5",
   "ios_saf 16.6-16.7",
@@ -37,6 +39,7 @@
   "op_mob 80",
   "opera 111",
   "opera 110",
+  "safari 18.0",
   "safari 17.6",
   "safari 17.5",
   "samsung 25",
