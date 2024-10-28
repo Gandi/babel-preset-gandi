@@ -45,7 +45,7 @@ module.exports = (context, options = {}) => {
     corejs: 3,
     helpers: true,
     regenerator: true,
-    version: '7.25.0', // 1
+    version: '7.26.0', // 1
   };
 
   let presets = [
