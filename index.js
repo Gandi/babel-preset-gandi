@@ -24,12 +24,20 @@
  */
 
 /**
- * 1. Ensure all helpers are imported instead of inlined.
+ * 1. https://babeljs.io/docs/babel-generator#:~:text=importAttributesKeyword
+ *
+ * 2. Ensure all helpers are imported instead of inlined.
  *    See https://github.com/babel/babel/issues/9297#issuecomment-453750049
  */
 
 module.exports = (context, options = {}) => {
   let { parser = 'babel', ...envOptions } = options;
+
+  let configOpts = {
+    generatorOpts: {
+      importAttributesKeyword: 'with', // 1
+    },
+  };
 
   let envOpts = {
     bugfixes: true,
@@ -45,7 +53,7 @@ module.exports = (context, options = {}) => {
     corejs: 3,
     helpers: true,
     regenerator: true,
-    version: '7.26.0', // 1
+    version: '7.26.0', // 2
   };
 
   let presets = [
@@ -60,6 +68,7 @@ module.exports = (context, options = {}) => {
   ];
 
   return {
+    ...configOpts,
     presets,
     plugins,
   };

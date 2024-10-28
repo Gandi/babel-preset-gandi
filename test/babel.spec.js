@@ -4,6 +4,7 @@ const { toMatchFile } = require('jest-file-snapshot');
 const preset = require('../');
 
 const es = require('./fixtures/es');
+const stage4 = require('./fixtures/stage4');
 const flow = require('./fixtures/flow');
 const react = require('./fixtures/react');
 const regressions = require('./fixtures/regressions');
@@ -21,7 +22,7 @@ describe('babel', () => {
     expect(code).toMatchFile();
   });
 
-  test.each(cases)('esm > %s', (name, input) => {
+  test.each([...stage4, ...cases])('esm > %s', (name, input) => {
     let { code } = transform(input, {
       presets: [[preset, { modules: false }]],
     });
