@@ -1,41 +1,47 @@
-const { transform } = require('@babel/core');
-const { toMatchFile } = require('jest-file-snapshot');
+import { expect, test, describe } from 'vitest';
 
-const preset = require('../');
+import filenamify from 'filenamify';
+import { transform } from '@babel/core';
 
-const es = require('./fixtures/es');
-const stage4 = require('./fixtures/stage4');
-const flow = require('./fixtures/flow');
-const react = require('./fixtures/react');
-const regressions = require('./fixtures/regressions');
+import preset from '../index.js';
+
+import es from './fixtures/es';
+import stage4 from './fixtures/stage4';
+import flow from './fixtures/flow';
+import react from './fixtures/react';
+import regressions from './fixtures/regressions';
 
 let cases = [...es, ...flow, ...react, ...regressions];
 
-expect.extend({ toMatchFile });
-
 describe('babel', () => {
-  test.each(cases)('cjsm > %s', (name, input) => {
+  test.for(cases)('cjsm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       presets: [preset],
     });
 
-    expect(code).toMatchFile();
+    await expect(code).toMatchFileSnapshot(
+      `./snapshots/babel/${filenamify(ctx.task.name, { replacement: '' })}.js`,
+    );
   });
 
-  test.each([...stage4, ...cases])('esm > %s', (name, input) => {
+  test.for([...stage4, ...cases])('esm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       presets: [[preset, { modules: false }]],
     });
 
-    expect(code).toMatchFile();
+    await expect(code).toMatchFileSnapshot(
+      `./snapshots/babel/${filenamify(ctx.task.name, { replacement: '' })}.js`,
+    );
   });
 
-  test.each(cases)('node > %s', (name, input) => {
+  test.for(cases)('node > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       targets: { node: 22 },
       presets: [preset],
     });
 
-    expect(code).toMatchFile();
+    await expect(code).toMatchFileSnapshot(
+      `./snapshots/babel/${filenamify(ctx.task.name, { replacement: '' })}.js`,
+    );
   });
 });

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   [
     'Stafe 4: import attributes',
     `

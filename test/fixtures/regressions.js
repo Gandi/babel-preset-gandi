@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   [
     'Regression: Flow void class properties',
     `

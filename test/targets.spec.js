@@ -1,12 +1,11 @@
-const { transform } = require('@babel/core');
-const { toMatchFile } = require('jest-file-snapshot');
-const browserslist = require('browserslist');
+import { expect, test } from 'vitest';
 
-const preset = require('../');
+import { transform } from '@babel/core';
+import browserslist from 'browserslist';
 
-expect.extend({ toMatchFile });
+import preset from '../index.js';
 
-test('targets', () => {
+test('targets', async () => {
   let {
     options: { targets },
   } = transform('', {
@@ -23,5 +22,5 @@ test('targets', () => {
     JSON.stringify(browsers, null, 2),
   ].join('\n');
 
-  expect(result).toMatchFile();
+  await expect(result).toMatchFileSnapshot('./snapshots/targets.js');
 });

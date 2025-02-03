@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   [
     'ES: object rest spread',
     `
