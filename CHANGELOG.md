@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [6.4.0] - 2025-04-08
+  * Babel `7.27.x` upgrades.
+
 ## 6.3.0 - 2024-10-28
 ### Changed
   * Babel `7.26.x` upgrades.
