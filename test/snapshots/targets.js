@@ -12,17 +12,18 @@
 }
 // Browerslist targets
 [
-  "and_chr 134",
-  "and_ff 136",
+  "and_chr 135",
+  "and_ff 137",
   "and_qq 14.9",
   "and_uc 15.5",
-  "android 134",
+  "android 135",
   "chrome 135",
   "chrome 134",
   "chrome 133",
   "chrome 132",
   "chrome 131",
   "chrome 109",
+  "edge 135",
   "edge 134",
   "edge 133",
   "firefox 137",
