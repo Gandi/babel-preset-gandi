@@ -36,4 +36,25 @@ export default [
     component Baz(foo: renders Foo) { <div>{foo}</div> }
     `,
   ],
+  [
+    'Flow component syntax with forwarded ref',
+    `
+    component Input(
+      ref: React.RefSetter<HTMLInputElement>,
+      ...{ id, name, value, defaultValue, ...extraProps }: Props
+    ) renders Base {
+      return (
+        <input
+          ref={ref}
+          id={id}
+          name={name}
+          value={value}
+          defaultValue={defaultValue}
+          {...extraProps}
+        />
+      );
+    }
+    export { Input };
+    `,
+  ],
 ];
