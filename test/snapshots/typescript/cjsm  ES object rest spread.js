@@ -1,0 +1,5 @@
+"use strict";
+
+let b = {
+  ...a
+};
