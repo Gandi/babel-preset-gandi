@@ -1,0 +1,2 @@
+let obj = {};
+let foo = obj.foo ?? 'default';

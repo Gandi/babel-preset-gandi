@@ -7,4 +7,14 @@ export default [
       let a: A = 'hello'
     `,
   ],
+  [
+    'Regression: Flow void class properties',
+    `
+      // @flow
+      type Props = {}
+      class C {
+        props: Props
+      }
+    `,
+  ],
 ];
