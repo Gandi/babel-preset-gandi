@@ -1,6 +1,13 @@
 # Change log
 
 ## [Unreleased]
+### Added
+  * Add a new config for Typescript.
+    Available under the `typescript` entry point.
+    In Babel config the preset must be referenced as such:
+    ```json
+    "presets": ["@gandi/babel-preset-gandi/typescript"]
+    ```
 
 ## 6.5.0 - 2025-07-16
 ### Changed

@@ -20,10 +20,15 @@
   "private": false,
   "files": [
     "index.js",
+    "typescript.js",
     "README.md",
     "LICENSE"
   ],
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./typescript": "./typescript.js"
+  },
   "scripts": {
     "test": "vitest"
   },
@@ -33,6 +38,7 @@
     "@babel/preset-env": "^7.28.5",
     "@babel/preset-flow": "^7.27.1",
     "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "babel-plugin-syntax-hermes-parser": "^0.32.1"
   },
   "devDependencies": {
