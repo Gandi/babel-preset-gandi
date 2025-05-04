@@ -65,6 +65,11 @@ module.exports = (context, options = {}) => {
     // allowDeclareFields: true, // 4
   };
 
+  let reactCompilerOpts = {
+    target: '18',
+    sources: null,
+  };
+
   let presets = [
     ['@babel/preset-env', envOpts],
     ['@babel/preset-react', reactOpts],
@@ -73,6 +78,7 @@ module.exports = (context, options = {}) => {
 
   let plugins = [
     ...(parser === 'hermes' ? ['babel-plugin-syntax-hermes-parser'] : []),
+    ['babel-plugin-react-compiler', reactCompilerOpts],
     ['@babel/plugin-transform-runtime', runtimeOpts],
   ];
 
