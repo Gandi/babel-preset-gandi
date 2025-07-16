@@ -33,6 +33,7 @@
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-flow": "^7.27.1",
     "@babel/preset-react": "^7.27.1",
+    "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "babel-plugin-syntax-hermes-parser": "^0.29.1"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs3": "7.28.x"
+    "@babel/runtime-corejs3": "7.28.x",
+    "react-compiler-runtime": "^19.1.0-rc.1"
   }
 }
