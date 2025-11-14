@@ -27,21 +27,21 @@
   "scripts": {
     "test": "vitest"
   },
-  "packageManager": "npm@11.5.2+sha512.aac1241cfc3f41dc38780d64295c6c6b917a41e24288b33519a7b11adfc5a54a5f881c642d7557215b6c70e01e55655ed7ba666300fd0238bc75fb17478afaf3",
+  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954",
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.28.3",
-    "@babel/preset-env": "^7.28.3",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "@babel/preset-flow": "^7.27.1",
-    "@babel/preset-react": "^7.27.1",
-    "babel-plugin-syntax-hermes-parser": "^0.32.0"
+    "@babel/preset-react": "^7.28.5",
+    "babel-plugin-syntax-hermes-parser": "^0.32.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.3",
-    "@babel/runtime-corejs3": "^7.28.3",
-    "browserslist": "^4.25.3",
-    "filenamify": "^6.0.0",
+    "@babel/core": "^7.28.5",
+    "@babel/runtime-corejs3": "^7.28.4",
+    "browserslist": "^4.28.0",
+    "filenamify": "^7.0.1",
     "prettier": "^3.6.2",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.8"
   },
   "peerDependencies": {
     "@babel/runtime-corejs3": "7.28.x"
