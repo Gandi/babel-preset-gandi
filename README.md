@@ -1,7 +1,7 @@
 # babel-preset-gandi
 
 Shareable [Babel](https://github.com/babel/babel) preset for [Gandi](https://github.com/Gandi).  
-Includes ES2022+, React, Flow, as well as common transforms and polyfills.
+Includes ES2022+, React, Flow, Typescript as well as common transforms and polyfills.
 
 
 ## Installation
@@ -9,13 +9,10 @@ Includes ES2022+, React, Flow, as well as common transforms and polyfills.
 ``` sh
 $ npm install --save-dev @gandi/babel-preset-gandi
 ```
-or
-``` sh
-$ yarn add --dev @gandi/babel-preset-gandi
-```
 
+## Flow
 
-## Usage
+### Usage
 
 Add the following line to your `.babelrc` file:
 
@@ -32,9 +29,49 @@ Pass options to `babel-preset-env`
   "presets": [["@gandi/gandi", { "modules": "false" }]]
 }
 ```
-
 See the [full list of available options](https://babeljs.io/docs/en/next/babel-preset-env.html#options).
 
+## Typescript
+
+### Usage
+
+Add the following line to your `.babelrc` file:
+
+``` json
+{
+  "presets": ["@gandi/babel-preset-gandi/typescript"]
+}
+```
+
+Pass options to `babel-preset-env`
+
+``` json
+{
+  "presets": [["@gandi/babel-preset-gandi/typescript", { "modules": "false" }]]
+}
+```
+See the [full list of available options](https://babeljs.io/docs/en/next/babel-preset-env.html#options).
+
+## Browsers support
+
+You should have a `.browserslistrc` file at the root of your project.    
+We use the [`defaults`](https://browsersl.ist/#q=defaults) query.   
+
+Or programmatically:
+```js
+// Client
+{
+  targets: { browsers: 'defaults' },
+  presets: [['@gandi/gandi', { modules: false }]],
+  babelrc: false,
+}
+// Server
+{
+  targets: { node: 24 },
+  presets: [['@gandi/gandi', { modules: false }]],
+  babelrc: false,
+}
+```
 
 ## Changelog
 
