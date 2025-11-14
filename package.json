@@ -47,7 +47,7 @@
     "browserslist": "^4.28.0",
     "filenamify": "^7.0.1",
     "prettier": "^3.6.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.9"
   },
   "peerDependencies": {
     "@babel/runtime-corejs3": "7.28.x"
