@@ -58,7 +58,7 @@ module.exports = (context, options = {}) => {
     corejs: 3,
     helpers: true,
     regenerator: true,
-    version: '7.28.0', // 2
+    version: '7.28.4', // 2
   };
 
   let flowOpts = {
