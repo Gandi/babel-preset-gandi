@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 6.6.0 - 2025-11-14
 ### Added
   * Add a new config for Typescript.
     Available under the `typescript` entry point.
