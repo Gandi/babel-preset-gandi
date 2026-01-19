@@ -32,22 +32,22 @@
   "scripts": {
     "test": "vitest"
   },
-  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954",
+  "packageManager": "npm@11.7.0",
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-env": "^7.28.6",
     "@babel/preset-flow": "^7.27.1",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
-    "babel-plugin-syntax-hermes-parser": "^0.32.1"
+    "babel-plugin-syntax-hermes-parser": "^0.33.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
-    "@babel/runtime-corejs3": "^7.28.4",
-    "browserslist": "^4.28.0",
+    "@babel/core": "^7.28.6",
+    "@babel/runtime-corejs3": "^7.28.6",
+    "browserslist": "^4.28.1",
     "filenamify": "^7.0.1",
-    "prettier": "^3.6.2",
-    "vitest": "^4.0.9"
+    "prettier": "^3.8.0",
+    "vitest": "^4.0.17"
   },
   "peerDependencies": {
     "@babel/runtime-corejs3": "7.28.x"
