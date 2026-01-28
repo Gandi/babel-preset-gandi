@@ -1,6 +1,6 @@
 // Babel targets
 {
-  "android": "142.0.0",
+  "android": "143.0.0",
   "chrome": "109.0.0",
   "edge": "142.0.0",
   "firefox": "140.0.0",
@@ -12,11 +12,12 @@
 }
 // Browerslist targets
 [
-  "and_chr 143",
-  "and_ff 146",
+  "and_chr 144",
+  "and_ff 147",
   "and_qq 14.9",
   "and_uc 15.5",
-  "android 143",
+  "android 144",
+  "chrome 144",
   "chrome 143",
   "chrome 142",
   "chrome 141",
@@ -25,8 +26,10 @@
   "chrome 125",
   "chrome 112",
   "chrome 109",
+  "edge 144",
   "edge 143",
   "edge 142",
+  "firefox 147",
   "firefox 146",
   "firefox 145",
   "firefox 140",
