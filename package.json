@@ -39,6 +39,7 @@
     "@babel/preset-flow": "^7.27.1",
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
+    "babel-plugin-react-compiler": "^1.0.0",
     "babel-plugin-syntax-hermes-parser": "^0.33.3"
   },
   "devDependencies": {
@@ -47,9 +48,11 @@
     "browserslist": "^4.28.1",
     "filenamify": "^7.0.1",
     "prettier": "^3.8.1",
+    "react-compiler-runtime": "^1.0.0",
     "vitest": "^4.0.18"
   },
   "peerDependencies": {
-    "@babel/runtime-corejs3": "7.28.x"
+    "@babel/runtime-corejs3": "7.28.x",
+    "react-compiler-runtime": "^1.0.0"
   }
 }

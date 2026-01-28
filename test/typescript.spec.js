@@ -13,12 +13,13 @@ import regressions from './fixtures/regressions';
 
 let cases = [...es, ...typescript, ...react, ...regressions];
 let filename = 'test.ts';
+let compilerOptions = { sources: null };
 
 describe('typescript', () => {
   test.for(cases)('cjsm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       filename,
-      presets: [preset],
+      presets: [[preset, { compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -29,7 +30,7 @@ describe('typescript', () => {
   test.for([...stage4, ...cases])('esm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       filename,
-      presets: [[preset, { modules: false }]],
+      presets: [[preset, { modules: false, compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -41,7 +42,7 @@ describe('typescript', () => {
     let { code } = transform(input, {
       filename,
       targets: { node: 22 },
-      presets: [preset],
+      presets: [[preset, { compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(

@@ -12,11 +12,12 @@ import react from './fixtures/react';
 import regressions from './fixtures/regressions';
 
 let cases = [...es, ...flow, ...syntax, ...react, ...regressions];
+let compilerOptions = { sources: null };
 
 describe('hermes', () => {
   test.for(cases)('cjsm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
-      presets: [[preset, { parser: 'hermes' }]],
+      presets: [[preset, { parser: 'hermes', compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -26,7 +27,9 @@ describe('hermes', () => {
 
   test.for(cases)('esm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
-      presets: [[preset, { parser: 'hermes', modules: false }]],
+      presets: [
+        [preset, { parser: 'hermes', modules: false, compilerOptions }],
+      ],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -37,7 +40,7 @@ describe('hermes', () => {
   test.for(cases)('node > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       targets: { node: 22 },
-      presets: [[preset, { parser: 'hermes' }]],
+      presets: [[preset, { parser: 'hermes', compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(

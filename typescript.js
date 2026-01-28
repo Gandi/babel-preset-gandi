@@ -30,7 +30,7 @@
  */
 
 module.exports = (context, options = {}) => {
-  let envOptions = options;
+  let { compilerOptions, ...envOptions } = options;
 
   let configOpts = {
     generatorOpts: {
@@ -60,13 +60,21 @@ module.exports = (context, options = {}) => {
     allExtensions: true,
   };
 
+  let reactCompilerOpts = {
+    target: '18',
+    ...compilerOptions,
+  };
+
   let presets = [
     ['@babel/preset-env', envOpts],
     ['@babel/preset-react', reactOpts],
     ['@babel/preset-typescript', typescriptOpts],
   ];
 
-  let plugins = [['@babel/plugin-transform-runtime', runtimeOpts]];
+  let plugins = [
+    ['@babel/plugin-transform-runtime', runtimeOpts],
+    ['babel-plugin-react-compiler', reactCompilerOpts],
+  ];
 
   return {
     ...configOpts,

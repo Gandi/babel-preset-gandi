@@ -5,12 +5,14 @@ import browserslist from 'browserslist';
 
 import preset from '../index.js';
 
+let compilerOptions = { sources: null };
+
 test('targets', async () => {
   let {
     options: { targets },
   } = transform('', {
     targets: { browsers: 'defaults' },
-    presets: [[preset, { modules: false }]],
+    presets: [[preset, { modules: false, compilerOptions }]],
   });
 
   let browsers = browserslist('defaults');

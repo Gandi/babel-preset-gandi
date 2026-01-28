@@ -12,11 +12,12 @@ import react from './fixtures/react';
 import regressions from './fixtures/regressions';
 
 let cases = [...es, ...flow, ...react, ...regressions];
+let compilerOptions = { sources: null };
 
 describe('babel', () => {
   test.for(cases)('cjsm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
-      presets: [preset],
+      presets: [[preset, { compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -26,7 +27,7 @@ describe('babel', () => {
 
   test.for([...stage4, ...cases])('esm > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
-      presets: [[preset, { modules: false }]],
+      presets: [[preset, { modules: false, compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
@@ -37,7 +38,7 @@ describe('babel', () => {
   test.for(cases)('node > %s', async ([name, input], ctx) => {
     let { code } = transform(input, {
       targets: { node: 22 },
-      presets: [preset],
+      presets: [[preset, { compilerOptions }]],
     });
 
     await expect(code).toMatchFileSnapshot(
