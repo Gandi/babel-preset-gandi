@@ -66,14 +66,16 @@ module.exports = (context, options = {}) => {
   };
 
   let presets = [
-    ['@babel/preset-env', envOpts],
-    ['@babel/preset-react', reactOpts],
-    ['@babel/preset-flow', flowOpts],
+    [require.resolve('@babel/preset-env'), envOpts],
+    [require.resolve('@babel/preset-react'), reactOpts],
+    [require.resolve('@babel/preset-flow'), flowOpts],
   ];
 
   let plugins = [
-    ...(parser === 'hermes' ? ['babel-plugin-syntax-hermes-parser'] : []),
-    ['@babel/plugin-transform-runtime', runtimeOpts],
+    ...(parser === 'hermes'
+      ? [require.resolve('babel-plugin-syntax-hermes-parser')]
+      : []),
+    [require.resolve('@babel/plugin-transform-runtime'), runtimeOpts],
   ];
 
   return {
