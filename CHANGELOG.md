@@ -1,6 +1,8 @@
 # Change log
 
 ## [Unreleased]
+
+## 6.7.1 - 2026-11-25
 ### Fixed
   * Resolve presets and plugins via `require.resolve()` instead of consumer root.
 
