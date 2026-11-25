@@ -61,12 +61,14 @@ module.exports = (context, options = {}) => {
   };
 
   let presets = [
-    ['@babel/preset-env', envOpts],
-    ['@babel/preset-react', reactOpts],
-    ['@babel/preset-typescript', typescriptOpts],
+    [require.resolve('@babel/preset-env'), envOpts],
+    [require.resolve('@babel/preset-react'), reactOpts],
+    [require.resolve('@babel/preset-typescript'), typescriptOpts],
   ];
 
-  let plugins = [['@babel/plugin-transform-runtime', runtimeOpts]];
+  let plugins = [
+    [require.resolve('@babel/plugin-transform-runtime'), runtimeOpts],
+  ];
 
   return {
     ...configOpts,
